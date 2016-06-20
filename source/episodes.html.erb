@@ -1,0 +1,88 @@
+---
+blog: podcast
+pageable: true
+per_page: 10
+priority: 0.9
+change_frequency: weekly
+title: "Episode Archives"
+---
+
+<header class="site-head" style="background-image: url(<%= image_path('cover-full.jpg') %>)">
+	<div class="vertical">
+		<div role='banner' class="header_typesome">
+      <a class="logo_typesome" href="/"><img src="<%= image_path('zadevchat.png') %>" alt="ZADevChat" /></a>
+			<h1 class="blogtitle_typesome">
+			<a title="ZADevChat" href='/'>
+			The ZADevChat Podcast Archives
+			</a>
+			</h1>
+		</div>
+	</div>
+</header>
+
+<main class="main_typesome" role="main">
+
+  <% page_articles.each_with_index do |article, i| %>
+		<article class="article_typesome">
+
+				<header class="postheader_typesome">
+					<ul>
+            <li class="name-thumb_typesome"><a href="/"><%= article.data.hosts.to_sentence %></a></li>
+            <span></span>
+						<li class="date_typesome"><time><%= article.date.strftime("%A %e %b %Y") %></time></li>
+					</ul>
+
+					<h2 class="posttitle_typesome">
+            <%= link_to article.title, article, rel: "bookmark" %>
+					</h2>
+				</header>
+
+			<div class="postcontent_typesome">
+        <% if i == 0 %>
+          <%= soundcloud_embed_large(article.data.soundcloud_url) %>
+        <% else %>
+          <%= soundcloud_embed_flash(article.data.soundcloud_url) %>
+        <% end %>
+        <p><%= article.summary %></p>
+			</div>
+
+			<footer class="excerptfooter_typesome" >
+				<section class="read_typesome">
+          <%= link_to "Read More", article, class: "more_typesome" %>
+					<span></span>
+          <a class="comments_typesome" href="<%= article.url %>#disqus_thread" data-disqus-identifier="<%= article.data[:disqus_identifier] %>">Comments</a>
+          <span></span>
+          <%= link_to "SoundCloud", article.data.soundcloud_url, class: "more_typesome" %>
+				</section>
+
+				<section class="share_typesome">
+					<h4>Share: &nbsp;</h4>
+          <a class="fa fa-twitter-square" target="_blank" href="http://twitter.com/share?text=<%= article.title %>&url=http://zadevchat.io<%= article.url %>"><span class="hidden_typesome">Twitter</span></a>
+				  <a class="fa fa-facebook-square" target="_blank" href="http://www.facebook.com/sharer.php?u=http://zadevchat.io<%= article.url %>"><span class="hidden_typesome">Facebook</span></a>
+				  <a class="fa fa-google-plus-square" target="_blank" href="https://plus.google.com/share?url=http://zadevchat.io<%= article.url %>"><span class="hidden_typesome">Google+</span></a>
+				</section>
+			</footer>
+
+		</article>
+
+    <% if i == 0 %>
+        <div class="newsletter-home-wrapper">
+        <%= partial :newsletter %>
+        </div>
+    <% end %>
+  <% end %>
+
+  <% if paginate %>
+	  <div class="pagination_typesome">
+      <nav class="pagination" role="navigation">
+        <% if prev_page %>
+          <a class="newer-posts" href="<%= prev_page.url %>"><span class="fa fa-chevron-left"></span> Newer Posts</a>
+        <% end %>
+        <span class="page-number">Page <%= page_number %> of <%= num_pages %></span>
+        <% if next_page %>
+          <a class="older-posts" href="<%= next_page.url %>">Older Posts <span class="fa fa-chevron-right"></span></a>
+        <% end %>
+      </nav>
+    </div>
+  <% end %>
+</main>

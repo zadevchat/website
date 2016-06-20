@@ -1,0 +1,83 @@
+<% wrap_layout :layout do %>
+  <header id="site-head" style="background-image: url(<%= image_path 'cover-narrow.png' %>)" class="site-head post-2">
+  	<div class="vertical">
+  		<div role='banner' class="header_typesome">
+        <a class="logo_typesome" href="/"><img src="<%= image_path('zadevchat.png') %>" alt="The ZADevChat Podcast" /></a>
+  			<h1 class="blogtitle_typesome">
+        <a title="ZADevChat" href='/'>
+        The ZADevChat Podcast
+  			</a>
+  			</h1>
+  		</div>
+  	</div>
+  </header>
+
+  <main class="main_typesome" role="main">
+  <hr class="pause remove" />
+
+	  <article class="article_typesome">
+
+		<header class="postheader_typesome">
+			<ul>
+        <li><time class="date_typesome"><%= current_article.date.strftime("%A %e %b %Y") %></time></li>
+        <%- tags = current_article.tags %>
+        <% if tags.any? %>
+				<li class="posttags_typesome"><%= tags.join(' | ') %></li>
+        <% end %>
+			</ul>
+
+      <h1 class="posttitle_typesome"><%= current_article.title %></h1>
+		</header>
+
+		<div class="postcontent_typesome">
+      <%= soundcloud_embed_large(current_article.data.soundcloud_url) %>
+
+      <%= yield %>
+
+      <% if picks = data.picks[ current_article.data.episode ] %>
+        <h3>Picks</h3>
+
+        <%= partial :picks_by_guest, locals: { picks: picks } %>
+      <% end %>
+
+      <p>Thanks for listening!</p>
+
+      <%= partial :newsletter %>
+		</div>
+
+		<div class="back_typesome">
+			<p class="go-back"><a class="fa fa-long-arrow-left" href="/"><span>Back</span></a></p>
+      <p class="nav"><a class="fa fa-long-arrow-up" href="<%= current_article.url %>"><span>Back to top</span></a></p>
+		</div>
+
+
+    <footer class="postfooter_typesome">
+
+      <div class="authorimage_typesome" style="background-image: url(<%= image_path 'zadevchat.png' %>)"></div>
+			<div class="author_typesome">
+				<ul>
+					<li><h4 class="authorname_typesome"><a href="/"><%= current_article.data.hosts.to_sentence %></a></h4></li>
+					<li><h5 class="authordata_typesome">Johannesburg, South Africa</h5></li>
+				</ul>
+        <p class="authorbio_typesome">
+          A weekly panel discussion with topics around the South African software developer community.
+        </p>
+			</div>
+
+		  <section class="sharepost_typesome">
+				<h4>Share this:</h4>
+        <a class="fa fa-twitter-square" target="_blank" href="http://twitter.com/share?text=<%= current_article.title %>&url=http://zadevchat.io<%= current_article.url %>"><span class="hidden_typesome">Twitter</span></a>
+        <a class="fa fa-facebook-square" target="_blank" href="http://www.facebook.com/sharer.php?u=http://zadevchat.io<%= current_article.url %>"><span class="hidden_typesome">Facebook</span></a>
+        <a class="fa fa-google-plus-square" target="_blank" href="https://plus.google.com/share?url=http://zadevchat.io<%= current_article.url %>"><span class="hidden_typesome">Google+</span></a>
+
+    	</section>
+
+		</footer>
+	</article>
+
+
+	<div class="disqusbox_typesome">
+    <%= disqus %>
+  </div>
+
+<% end %>

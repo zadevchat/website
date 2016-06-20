@@ -1,0 +1,18 @@
+<ul>
+    <% picks_by_guest(picks).each do |by, their_picks| %>
+        <li>
+            <%= by %>
+            <ul>
+                <% their_picks.each do |pick| %>
+                    <li>
+                        <% if pick["url"].blank? %>
+                            <%= pick["description"] %>
+                        <% else %>
+                            <%= link_to pick["description"], pick["url"] %>
+                        <% end %>
+                    </li>
+                <% end %>
+            </ul>
+        </li>
+    <% end %>
+</ul>

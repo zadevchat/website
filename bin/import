@@ -1,0 +1,110 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+
+#
+# Get started
+#
+
+begin
+  require "dotenv"
+  Dotenv.load
+rescue LoadError => e
+  puts "Failed to load 'dotenv', hoping your environment is setup"
+end
+
+require "soundcloud"
+require "yaml"
+
+client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
+track = client.get('/resolve', url: ARGV[0])
+
+puts track.inspect if $DEBUG
+
+#
+# Extract the data
+#
+
+title = track["title"]
+number = title.scan(/\d+/).first
+created_at = track["created_at"].split(/\s+/).first
+permalink = track["permalink_url"]
+description = track["description"]
+hosts = description.scan(/Kenneth|Kevin|Len/).uniq
+
+# Where does the picks start?
+picks_start = 0
+
+#
+# Write out the show template
+#
+
+File.open("source/podcast/#{number}.html.md", "w+") do |f|
+  # Page frontmatter
+  hosts_data = hosts.map { |h| "  - #{h}" }.join("\n")
+  f.write(<<-EOF)
+---
+title: "#{title}"
+date: #{created_at}
+soundcloud_url: #{permalink}
+hosts:
+#{hosts_data}
+---
+
+EOF
+
+  lines = description.split("\n")
+  puts "Total lines to process: #{lines.size}" if $DEBUG
+
+  # Write out the body
+  lines.each do |line|
+    # Maybe we're at picks?
+    picks_start += 1
+
+    # Picks?
+    if line.match /(Pick list|our picks|Picks)/
+      break
+    end
+
+    f.write line + "\n"
+  end
+
+  picks = []
+  by = nil
+
+  puts "Picks start: #{picks_start}" if $DEBUG
+
+  Array(lines[picks_start..-1]).each do |line|
+    puts "[pick] #{line}" if $DEBUG
+
+    # Skip the final lines
+    break if line.match(/Thanks for listening|Stay in touch/)
+
+    # Skip blank lines
+    next if line == ""
+
+    # Be optimistic
+    parts = line.split(/\s\-\s/)
+    parts.shift if parts.length == 3
+    description, url = parts
+
+    # Older picks?
+    if match = line.match(/^\d\.\s([^\(\)]+)\((.*)\)/)
+      description = match[1].strip
+      url = match[2].strip
+    end
+
+    # Next pick?
+    if description && url
+      description.gsub!(/^([\*\-]\s)/, "")
+      picks << { "by" => by, "description" => description, "url" => url }
+
+    else
+      by = line.scan(/[\w]+/).first
+    end
+
+  end
+
+  # Write our the picks in the file for review
+  f.write "\n\n## Picks YAML\n\n"
+  f.write({ number => picks }.to_yaml)
+end

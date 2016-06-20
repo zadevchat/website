@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:site" content="@zadevchat">
+    <meta name="twitter:creator" content="@zadevchat">
+    <meta name="google-site-verification" content="">
+    <meta property="fb:admins" content="">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/7ac7439173.js"></script>
+    <%= stylesheet_link_tag "styles" %>
+
+    <title><%= current_article.title + '-' unless current_article.nil? %>The ZADevChat Podcast</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <%= feed_tag :atom, "/feed.xml", title: "ATOM feed for blog and podcast" %>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="home-template">
+    <%= google_analytics_universal_tag %>
+
+    <div id="main" role="main">
+      <%= yield %>
+    </div>
+
+    <aside class="recent-items">
+      <div class="recent-items__col">
+      <h2>Recent Episodes</h2>
+      <ol>
+        <% blog('podcast').articles[0...5].each do |article| %>
+          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+        <% end %>
+      </ol>
+      </div>
+      <% if blog('blog').articles.any? %>
+      <div class="recent-items__col">
+      <h2>Recent Articles</h2>
+      <ol>
+        <% blog('blog').articles[0...10].each do |article| %>
+          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+        <% end %>
+      </ol>
+      </div>
+      <% end %>
+    </aside>
+
+    <footer class="footer_typesome">
+    	<div class="main_typesome">
+    	<ul>
+    		<li><span class="tooltip">Subscribe!</span><a class="fa fa-rss" target="_blank" href="/feed.xml"></a></li>
+    		<li><span class="tooltip">iTunes</span><a class="fa fa-apple" href="https://itunes.apple.com/za/podcast/zadevchat-podcast/id1057372777"></a></li>
+    		<li><span class="tooltip">Twitter</span><a class="fa fa-twitter" href="https://twitter.com/zadevchat"></a></li>
+    		<li><span class="tooltip">Github</span><a class="fa fa-github" href="https://github.com/zadevchat"></a></li>
+    		<li><span class="tooltip">SoundCloud</span><a class="fa fa-soundcloud" href="https://soundcloud.com/zadevchat"></a></li>
+    		<li><span class="tooltip">Facebook</span><a class="fa fa-facebook" href="https://facebook.com/zadevchat"></a></li>
+    	</ul>
+    		<hr />
+        <p>All content copyright <a href="/">The ZADevChat Podcast</a> &copy; <%= Time.now.strftime("%Y") %> &bull; All rights reserved.</p>
+    		<p>Theme created by <a href="http://golem.io">golem.io</a> &bull; Proudly published with <a class="icon-ghost" href="http://middlemanapp.com" target="_blank">Middleman</a></p>
+    	</div>
+    </footer>
+  </body>
+</html>

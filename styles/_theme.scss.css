@@ -1,0 +1,1239 @@
+/* ==========================================================================
+   								Table of Contents
+========================================================================== */
+
+/*
+
+    0.  Includes
+    1.  Basics
+    2.  Utilities
+    3.  General
+    4.  Articles
+    5.  Third Party Elements
+    6.  Pagination
+    7.  Footer
+    8.  Single Post - post.hbs
+    9.  Third Party Elements -> post.hbs
+   10.  Comments - Disqus
+   11.  Author Page    
+   12.  Media Queries (Tablet)
+   13.  Media Queries (Phone)
+
+ */
+ 
+ /* ==========================================================================
+   					            0. Includes 
+   ========================================================================== */
+
+@import "normalize.scss";
+
+ /* ==========================================================================
+   					1. Basics - Setting up some base styles
+   ========================================================================== */
+
+html {
+	height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+	}
+
+body {
+	height: 100%;
+    max-height: 100%;
+    font-family: $default-font-family;
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    color: #383838;
+	background: #fff;
+	}
+	
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	text-rendering: optimizelegibility;
+	line-height: 1;
+	}	
+	
+::-moz-selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+	}
+
+::selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+	}
+
+h1 { font-size: 4.8rem; }
+
+h2 { font-size: 3.8rem; }
+
+h3 { font-size: 3.2rem; }
+
+h4 { font-size: 2.8rem; }
+
+h5 { font-size: 2.2rem; }
+
+h6 { font-size: 1.8rem; }
+
+a {
+    color: #383838;
+    transition: all ease 0.3s;
+	}
+	
+a:visited { outline: none; }
+
+a:hover {
+    color: #5BA4E5;
+	}	
+		
+a:active { outline: none; }	
+	
+a:focus { outline: none; }
+
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+    color: #383838;
+	}
+
+p, ul, ol, dl {
+    margin: 1.6em 0;
+	}
+
+ol ol, ul ul,
+ul ol, ol ul {
+    margin: 0.4em 0;
+	}
+
+dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em
+	}
+
+dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em
+	}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    margin: 3.2em 0;
+    padding: 0;
+	}
+
+img {
+    border: 0;
+}	
+
+.postcontent_typesome img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+    padding: 0.6em 0;
+	} 
+	
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0 1.6em -2.2em;
+    padding: 0 0 0 1.6em;
+    border-left: #4a4a4a 0.4em solid;
+	}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
+	}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size:0.9em;
+    color: #ccc;
+	}
+
+blockquote small:before { content: '\2014 \00A0'; }
+
+blockquote cite {
+    font-weight:bold;
+	}
+
+blockquote cite a { font-weight: normal; }
+
+mark {
+    background-color: #ffc336;
+	}
+
+code, tt {
+    padding: 1px 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.85em;
+    white-space: pre-wrap;
+    border: 1px solid #E3EDF3;
+    background: #F7FAFB;
+    border-radius: 2px;
+	}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #E3EDF3;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+	}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+	}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: #ccc 1px solid;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.2), 
+        0 1px 0 0 #fff inset;
+	}
+
+table {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width:100%;
+    max-width: 100%;
+    background-color: transparent;
+	}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef;
+	}
+
+table th { color: #000; }
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+	}
+
+table tbody + tbody { border-top: 2px solid #efefef; }
+
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+    background-color: #f6f6f6;
+	}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+   background: transparent;
+	}
+
+iframe, .fluid-width-video-wrapper {
+    display: block;
+    margin: 1.6em 0;
+	}
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+    margin: 0;
+	}
+
+
+/* ==========================================================================
+   								2. Utilities
+   ========================================================================== */
+
+.hidden_typesome {
+	text-indent: -99999px;
+    visibility: hidden;
+    display: none;
+	}
+		
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+	}
+
+/* =========================================================================
+   					3. General - The main styles for the the theme 
+   ========================================================================== */
+  
+.site-head {height: 500px;}
+#site-head {height: 300px;}
+
+.site-head, #site-head {
+	position: relative;
+	display: table; 
+	width: 100%;
+	margin-bottom: 6rem;
+	text-align: center;
+	color: #fff;
+	background: #2B2B2B no-repeat center center;
+  	background-size: cover;
+	}
+
+.site-head:before, #site-head:before {
+	content: "";
+	display: block; 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: -o-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%) ;
+	background-image: -moz-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);
+	background-image: -webkit-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);
+	background-image: -ms-linear-gradient(-90deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);
+	background-image: linear-gradient(-180deg, rgba(43,43,43,0.20) 0%, rgba(43,43,43,0.50) 100%);	
+	} 
+
+.header_typesome {
+	position: relative;
+	margin: 3rem auto;
+	width: 80%;
+	max-width: 700px;
+    display: block;
+	}
+
+    /* Logo */
+
+ .logo_typesome img {
+	display: block;
+	height: 90px;
+    width: 90px;
+	margin: 0 auto;
+	border-radius: 100px;
+	border: 3px solid #fff;
+	-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+	box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.5);
+	}	
+	
+.blogtitle_typesome {
+	margin: 2rem 0 2rem;
+	}
+
+.blogtitle_typesome a,  #site-head .header_typesome .blogtitle_typesome a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 4.8rem;
+	color: #fff; 
+	text-shadow: 2px 2px 0px #000;
+	text-decoration: none;
+	}
+ 
+.blogdescription_typesome {
+	font-family: $default-font-family;
+	font-size: 1.6rem;
+	color: #eee;
+	line-height: 1.4;
+	text-shadow: 1px 1px 2px #000;
+	width: 70%;
+	margin: 0 auto;
+	text-rendering: optimizelegibility;
+	}
+
+/* ==========================================================================
+   								4. Articles
+   ========================================================================== */
+
+.main_typesome {
+	width: 80%;
+	max-width: 780px;
+	margin: 0 auto;
+	}
+	 	
+.article_typesome {
+	margin-bottom: 6rem;
+	}
+	
+.postheader_typesome ul {
+	margin: 0;
+	padding: 0;
+	}
+
+.author-thumb_typesome {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    vertical-align: bottom;
+    margin-right: 0.5rem;
+}
+	
+.postheader_typesome ul li {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	}
+	
+.date_typesome, .posttags_typesome, .posttags_typesome a, .name-thumb_typesome a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.4rem;
+	color: #7F7F7F;
+    text-decoration: none;
+	}
+
+.posttags_typesome a:hover, .name-thumb_typesome a:hover  {
+    text-decoration: underline;
+    color: #5BA4E5;
+}
+	
+.posttags_typesome:before, .postheader_typesome ul li:nth-child(3):before {
+	content:" • ";
+	font-weight: 700;
+    color: #7F7F7F;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+	}
+	
+	/* Post title */
+
+.posttitle_typesome {
+	padding: 1rem 0 1.2rem;
+	margin: 0;
+	line-height: 1.2em;
+	}
+
+.posttitle_typesome a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #383838;
+	text-decoration: none;
+	}
+
+.posttitle_typesome a:hover {
+	color: #5BA4E5;
+	}
+
+	/* Post content */
+	
+.postcontent_typesome {
+	font-family: $default-font-family;
+	font-size: 2rem;
+	color: #383838;
+	line-height: 1.6;
+	padding-bottom: 2rem;
+	}
+	
+.postcontent_typesome p:first-child {
+	margin: 0;
+	padding: 0;
+	}	
+
+
+/* ==========================================================================
+   								5. Third Party Elements
+   ========================================================================== */
+
+.excerptfooter_typesome {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.6rem;
+	color: #383838; 
+	}
+
+.read_typesome {
+	padding-top: 1rem;
+	padding-bottom: 1.4rem;
+	}
+	
+.read_typesome span:before {
+	content:" • ";
+	}
+
+.share_typesome {
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	overflow: hidden;	
+	}
+	
+.share_typesome h4 {
+	font-size: 1.6rem;
+	color: #7F7F7F;
+	float: left;
+	padding-top: 1rem;
+	margin-top: 0;	
+	}
+	
+.share_typesome a {
+	font-size: 2rem;
+	color: #ddd;
+	text-decoration: none;
+	margin-left: 0.3rem;
+	padding-top: 0.8rem;
+	}
+
+.share_typesome a:hover {
+	color: #383838;
+	}
+
+ /* ==========================================================================
+   	        6. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+
+.pagination {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.4rem;		
+	position: relative;
+	padding-bottom: 10rem;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 780px;
+	text-align: center;
+	}
+	
+.pagination a { 
+	color: #7F7F7F;
+	text-decoration: none;
+	 }
+
+.newer-posts, .older-posts  {
+	display: inline-block;
+	border-radius: 4px;
+	border: 2px solid #ddd;
+	padding: 0.8rem 2.5rem;
+	position: absolute;	
+	max-width: 100%;
+	transition: border-color ease-out 0.4s, color ease-out 0.4s;
+	}
+		
+.older-posts:hover,
+.newer-posts:hover {
+    border-color: #7F7F7F;
+	}
+
+.older-posts { right: 0; }
+.newer-posts { left: 0; }
+
+.older-posts span { padding-left: 5px; }
+.newer-posts span {	padding-right: 5px; }
+
+.page-number {
+	color: #7F7F7F;
+	display: inline-block;
+	margin: 1.4rem auto;		
+	}
+	
+ /* ==========================================================================
+   					7. Footer - The bottom of every page
+   ========================================================================== */
+
+.footer_typesome {
+	background: #2B2B2B;
+	width: 100%;
+	}
+	
+.footer_typesome .main_typesome {
+	padding: 6rem 0;
+	}	
+	
+.footer_typesome ul {
+	display: table;
+	border-spacing: 20px 0;
+	border-collapse: separate;
+	margin: 0 auto;
+	position: relative;
+	padding: 0;
+	}
+	
+.footer_typesome ul li {
+	padding: 0;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	background: #383838;
+	-moz-box-shadow:    0px 0px 4px 0px rgba(0,0,0,0.20);
+	-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.20);
+	box-shadow:         0px 0px 4px 0px rgba(0,0,0,0.20);
+	}
+	
+.footer_typesome ul:last-child {
+	border-spacing: 0;
+	}
+	
+.footer_typesome ul li a {
+	line-height: 2.2em;
+	color: #bbb;
+	text-decoration: none;
+	font-size: 1.6rem;
+	width: 32px;
+	height: 32px;
+	}
+	
+.footer_typesome ul li:hover {
+     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,1);
+   -moz-box-shadow: 0 1px 4px rgba(0,0,0,1);
+        box-shadow: 0 1px 4px rgba(0,0,0,1);
+   -webkit-transition:box-shadow 0.25s;
+   -moz-transition:box-shadow 0.25s;
+     -o-transition:box-shadow 0.25s;
+        transition:box-shadow 0.25s;
+		}
+.footer_typesome ul li a:hover {
+	color: #fff;
+	}
+		
+    /* Tooltip */
+
+.tooltip {
+	border-spacing: 0;
+	display: none;
+    padding: 4px 8px 5px 8px;
+    position: absolute;
+	width: 5rem;
+	margin-left: -18px;
+    top: -50px;
+    color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;  
+    font-size: 1rem;
+    line-height: 1em;
+    text-align: center;
+    background: #202020;
+    border-radius: 5px;
+	}
+	
+	/* The little chiclet arrow under the tooltip, pointing down */
+
+.tooltip:after {
+    content: "";
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #202020 transparent;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left:-5px;
+    z-index: 220;
+    width: 0;
+	opacity: 0;
+	}
+
+/* On hover, show the tooltip! */
+
+.footer_typesome ul li:hover .tooltip {
+    display: inline-table;
+    opacity: 1;
+    top: -33px;
+	}
+
+.footer_typesome ul li:hover .tooltip:after {
+    opacity: 1;
+    }
+	 
+.footer_typesome hr {
+	background: #383838;
+	height: 1px;
+	border-top: 1px #202020 solid;	
+	width: 35%;
+	margin: 2.4rem auto;
+	}
+
+.footer_typesome .main_typesome p {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.4rem;
+	color: #bbb;
+	line-height: 1.4em;
+	text-shadow: 0px 1px 0px #000;
+	margin: 0;
+	}
+
+.footer_typesome .main_typesome p a {
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #bbb;
+	}
+	
+.footer_typesome .main_typesome p a:hover {
+	color: #fff;
+	}
+
+ /* ==========================================================================
+   					8. Single Post - When you click on an individual post
+   ========================================================================== */
+	
+    /* Article Header */
+
+.post-2 {
+	background: #fff;
+    margin-bottom: 5rem;
+    height: 300px;
+}
+
+.post-2:before {
+	content: "";
+	display: none;  
+}
+
+.post-2 .header_typesome .logo_typesome img {
+    box-shadow: none;
+}
+
+.post-2 .header_typesome .blogtitle_typesome, .post-2 .blogtitle_typesome a {
+    color: #383838;
+    text-shadow: none;
+}
+
+.post-2 .header_typesome .blogtitle_typesome a:hover {
+    color: #5BA4E5;
+}
+
+.post-2 .header_typesome .blogtitle_typesome {
+    margin: 3.5rem 0;
+
+}
+
+.main_typesome .pause {
+    width: 100%;
+    max-width: 780px;
+    border: none;
+    margin: 0 auto 4rem;
+    border-top: 1px solid #ddd;
+}
+
+.remove {
+    display: none !important;
+}
+
+.back_typesome {
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+	}
+
+.back_typesome p {
+	margin: 0 0 1rem;
+	}
+
+.back_typesome a {
+	color: #7F7F7F;
+	font-size: 1.4rem;
+	text-decoration: none;
+	padding-bottom: 2px;
+	border-bottom: 1px #7F7F7F dotted;
+	}
+
+.back_typesome a:hover {
+	color: #383838;
+	}
+
+.go-back {
+	float: left;
+	}
+	
+.nav {
+	float: right;
+	}
+	
+.back_typesome span {
+	margin-left: 0.5rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	}
+	
+/* Article Footer */	
+.postfooter_typesome {
+	width: 100%;
+    max-width: 780px;
+    margin: 1rem auto;
+	max-width: 100%;
+	border-top: 2px #f6f6f6 solid;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	flex-direction: row;
+    justify-content: flex-start;
+	padding: 1.5rem 0 0;
+	}
+	
+/* Author Image */
+.authorimage_typesome {
+    background-repeat: no-repeat;
+    background-size: cover;
+	border: 4px solid #f4f4f4;
+	border-radius: 100%;
+	display: block;
+    height: 90px;
+	width: 90px;
+	margin: 0.4rem 2.5rem 0 0;	
+	}
+
+.author_typesome {
+	flex: 3;
+	width: 60%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	line-height: 0;
+	color: #383838;
+	font-size: 1.4rem;
+	border-right: 1px #f6f6f6 solid;
+	}
+	
+.author_typesome ul {
+	margin: 0;
+	padding: 1.2rem 0 0;
+	}
+	
+.author_typesome ul li {
+	 display: inline-block;
+	 margin: 0;
+	 padding: 0.5rem 0;
+	}
+	
+/* Author Name*/
+.author_typesome ul li h4 {
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0
+	}	
+
+.author_typesome ul li h4 a {
+    text-decoration: none;
+}
+	
+/* Author Address, Website */
+.author_typesome ul li h5 {
+	margin: 0;
+	padding: 0;
+	}
+
+.authordata_typesome {
+	font-size: 1.4rem;
+	color: #7F7F7F;
+	font-family: $default-font-family;
+	font-weight: 400; 
+	font-style: italic;
+	}
+		
+.authordata_typesome a {
+	color: #7F7F7F;
+	}
+	
+.authordata_typesome a:hover {
+	color: #5BA4E5;
+	}
+		
+.authordata_typesome:before {
+	content: " • ";
+	font-weight: 300;
+	color: #7F7F7F;
+	}	
+	
+/* Author Bio */
+.authorbio_typesome {
+	font-family: $default-font-family;
+	font-weight: 400; 
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 1.2rem 1rem 0 0;
+	line-height: 1.4;
+	color: #7F7F7F;
+	}
+
+ /* ==========================================================================
+   					9. Third Party Elements -> post.hbs
+   ========================================================================== */	
+
+.postfooter_typesome .sharepost_typesome  {
+	width: 20%;
+	margin: 1.7rem auto;
+	padding: 0; 
+	text-align: center;
+	}
+
+.postfooter_typesome .sharepost_typesome h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.4rem;
+	color: #383838;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	}
+	
+.postfooter_typesome .sharepost_typesome a {
+	font-size: 2.2rem;
+	color: #ddd;
+	text-decoration: none;
+	margin: 1.5rem auto;
+	padding-right: 0.5rem;
+	text-align: center;
+	}
+
+.postfooter_typesome .sharepost_typesome a:last-child {
+	margin: 0; 
+	padding: 0;
+	}
+
+.postfooter_typesome .sharepost_typesome a:hover {
+	color: #383838;
+	}
+	
+ /* ==========================================================================
+   					10. COMMENTS - Disqus
+   ========================================================================== */
+
+.cmd_typesome {
+	height: 6rem;
+	max-width: 780px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #7F7F7F;
+	font-size: 1.4rem;
+	border-radius: 4px;
+	border: 2px solid #ddd;	
+	transition: border ease 0.3s;
+	margin: 0 0 5rem;
+	padding: 0;
+	background: none;
+	transition: background-color ease-in 0.3s, border-color ease-out 0.4s, color ease-out 0.4s;
+	}		
+	
+.cmd_typesome:hover {
+	border-color: #7F7F7F;
+	color: #fff;
+	background: #7F7F7F;
+	}
+
+ /* ==========================================================================
+   					            11. Author Page
+   ========================================================================== */
+
+    /* Logo */
+
+ .site-head .authorimage_typesome {
+	display: block;
+	height: 90px;
+    width: 90px;
+	margin: 0 auto;
+	border-radius: 100px;
+    background-size: cover;
+	border: 3px solid #fff;
+	-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+	box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.5);
+	}
+
+.site-head h5, .site-head h5 a {
+    display: inline-block;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-decoration: none;
+}
+
+.site-head .authordata_typesome:before {
+    display: none;
+}
+
+.site-head h5 {
+    margin: 2.4rem 1rem;
+}
+
+.site-head h5 i {
+    margin-right: 0.6rem;
+}
+
+.site-head h5 a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.back_typesome .go-home {
+    margin-bottom: 5rem;
+}
+
+	
+/* ==========================================================================
+  							12. Media Queries - Tablet
+   ========================================================================== */
+   
+  @media only screen and (max-width: 900px) {
+	   
+	 blockquote {
+        margin-left: 0;
+    	}
+		
+	.site-head {
+       	min-height: 280px;
+		}
+		
+	.blogtitle_typesome a, #site-head .header_typesome .blogtitle_typesome a {
+        font-size: 4rem;
+        letter-spacing: -1px;
+        line-height: 1.1;
+    }
+
+    .blogdescription_typesome {
+        font-size: 1.7rem;
+        line-height: 1.5em;
+    }
+	
+	.posttitle_typesome {
+		font-size: 3.5rem;
+	}
+		
+	.postcontent_typesome {
+		font-size: 1.8rem;
+	}
+
+    h1 {
+        font-size: 3.5rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+    }
+	
+	.share_typesome a {
+		padding-left: 1rem;
+		}
+	
+	.author_typesome {
+		max-width: 50%;
+		}
+		
+    .postfooter_typesome .sharepost_typesome {
+		width: 20%;
+		   }
+		   
+	.postfooter_typesome .sharepost_typesome h4 {
+		margin: 0 auto 10%;
+		}
+		   
+	.postfooter_typesome .sharepost_typesome a {
+		padding: 0 5% 0 0;
+		margin: 0.5rem 0 0;
+		}
+  }
+	
+/* ==========================================================================
+   					13. Media Queries - Phone
+   ========================================================================== */
+ 
+   @media all and (max-width: 600px) {
+	   
+	   .site-head, #site-head {
+			max-height: 100%;
+			margin-bottom: 3rem;
+			width: 100%;
+		}
+		
+		.main_typesome {
+			width: 94%;
+			}
+	   
+	   .blogtitle_typesome a, #site-head .header_typesome .blogtitle_typesome a {
+           font-size: 3rem;
+           letter-spacing: -1px;
+           margin: 2rem auto;
+    	}
+
+    	.blogdescription_typesome {
+			font-size: 1.5rem;
+			line-height: 1.5em;
+			width: 90%;
+    	}
+		.posttitle_typesome {
+			font-size: 3.5rem;
+		}
+		
+		.postcontent_typesome {
+			font-size: 1.8rem;
+		}
+
+		h1, h2 {
+			font-size: 3rem;
+			letter-spacing: -1px;
+			line-height: 1.1em;
+		}
+
+		h3 {
+			font-size: 2.8rem;
+		}
+	
+		h4 {
+			font-size: 2.3rem;
+		}
+		
+		.posttitle_typesome {
+			font-size: 2.8rem;
+		}
+			
+		.postcontent_typesome {
+			font-size: 1.6rem;
+		}
+		
+		.postheader_typesome ul {
+			line-height: 1.8;
+			}
+       
+       .author-thumb_typesome {
+            vertical-align: middle;
+           margin-bottom: 0.2rem;
+        }
+       
+        .postheader_typesome ul .date_typesome, .postheader_typesome ul .posttags_typesome {
+            display: block;
+        }
+		
+		.date_typesome, .readtime_typesome, .posttags_typesome a, .name-thumb_typesome a  {
+			font-size: 1.2rem;
+			line-height: 1.2;
+			padding: 0;
+			margin: 0;
+			}
+		
+		.excerptfooter_typesome {
+			height: 10rem;
+			margin: 0 auto;
+			text-align: center;
+			border-top: 1px solid #ddd;
+			}
+		
+		.share_typesome {
+			display: inline-block;
+			width: 100%;
+			top: 4rem;
+			text-align: center;
+			}	
+		
+		.share_typesome h4 {
+			display: none;
+			}
+		
+		.share_typesome a {
+			margin: 0;
+			padding: 2rem 1rem 0;
+			font-size: 2.5rem;
+			}
+		
+		.pagination {
+			padding: 2rem 0 5rem;
+			width: 100%;
+			text-align: center;	
+			}
+		
+		.newer-posts, .older-posts {
+			position: static;
+			}
+			
+		.page-number {
+			display: block;}
+		
+		.postfooter_typesome {
+			display: block;
+			}
+         
+       .postfooter_typesome .sharepost_typesome a:last-child {
+            margin: 0 0.8rem; 
+            padding: 0;
+            }
+			
+		.authorimage_typesome {
+			display: none;
+			}
+		
+		.author_typesome {
+			display: block;
+			border-right: none;
+			margin: 0 auto;
+			width: 100%;
+			max-width: 600px;
+			text-align: center;
+			}
+		
+		.authorbio_typesome {
+			padding: 1rem 0 0;
+			margin: 0 auto;
+			text-align: center;
+			}
+		
+		.postfooter_typesome .sharepost_typesome {
+			display: block;
+			margin: 3rem auto;
+			width: 100%;
+			text-align: center;
+			padding: 0;
+			}
+		.postfooter_typesome .sharepost_typesome h4 {
+			padding: 0;
+			margin: 0 0 1.5rem 0;
+			}	
+		
+		.postfooter_typesome .sharepost_typesome a {
+			padding: 0;
+			margin: 0 0.8rem;
+			font-size: 2.5rem;
+			}
+		
+		.article_typesome {
+			margin-bottom: 4rem;
+			}
+		}

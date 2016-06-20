@@ -1,0 +1,73 @@
+<% wrap_layout :layout do %>
+  <%- image = current_page.data[:image] %>
+  <header id="<% if image %>site-head" style="background-image: url(<%= image_path image %>)<% else %>no-cover<% end %>" class="site-head post-2">
+  	<div class="vertical">
+  		<div role='banner' class="header_typesome">
+        <a class="logo_typesome" href="/"><img src="<%= image_path('kenneth.jpg') %>" alt="Open Sourcery" /></a>
+  			<h1 class="blogtitle_typesome">
+        <a title="Open Sourcery" href='/'>
+        Open Sourcery
+  			</a>
+  			</h1>
+  		</div>
+  	</div>
+  </header>
+
+  <main class="main_typesome" role="main">
+  <hr class="pause <% if image %>remove<% end %>" />
+
+	  <article class="article_typesome">
+
+		<header class="postheader_typesome">
+			<ul>
+        <li><time class="date_typesome"><%= current_article.date.strftime("%A %e %b %Y") %></time></li>
+        <%- tags = current_article.tags %>
+        <% if tags.any? %>
+				<li class="posttags_typesome"><%= tags.join(' | ') %></li>
+        <% end %>
+			</ul>
+
+      <h1 class="posttitle_typesome"><%= current_article.title %></h1>
+		</header>
+
+		<div class="postcontent_typesome">
+      <%= yield %>
+		</div>
+
+		<div class="back_typesome">
+			<p class="go-back"><a class="fa fa-long-arrow-left" href="/"><span>Back</span></a></p>
+      <p class="nav"><a class="fa fa-long-arrow-up" href="<%= current_article.url %>"><span>Back to top</span></a></p>
+		</div>
+
+
+    <footer class="postfooter_typesome">
+
+      <div class="authorimage_typesome" style="background-image: url(<%= image_path 'kenneth.jpg' %>)"></div>
+			<div class="author_typesome">
+				<ul>
+					<li><h4 class="authorname_typesome"><a href="/">Kenneth Kalmer</a></h4></li>
+					<li><h5 class="authordata_typesome">Johannesburg, South Africa</h5></li>
+				</ul>
+        <p class="authorbio_typesome">
+        Performing regular wizardry through open-source software
+        </p>
+			</div>
+
+		  <section class="sharepost_typesome">
+				<h4>Share this:</h4>
+        <a class="fa fa-twitter-square" target="_blank" href="http://twitter.com/share?text=<%= current_article.title %>&url=http://www.opensourcery.co.za<%= current_article.url %>"><span class="hidden_typesome">Twitter</span></a>
+        <a class="fa fa-facebook-square" target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.opensourcery.co.za<%= current_article.url %>"><span class="hidden_typesome">Facebook</span></a>
+        <a class="fa fa-google-plus-square" target="_blank" href="https://plus.google.com/share?url=http://www.opensourcery.co.za<%= current_article.url %>"><span class="hidden_typesome">Google+</span></a>
+        <h4>Support me:</h4>
+        <%= flattr_article(current_page) %>
+
+    	</section>
+
+		</footer>
+	</article>
+
+
+	<div class="disqusbox_typesome">
+    <%= disqus %>
+  </div>
+<% end %>

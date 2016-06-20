@@ -1,0 +1,54 @@
+@import "config.scss";
+
+@import "theme.scss";
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('/fonts/MuseoSans_500-webfont.eot');
+    src: url('/fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+         url('/fonts/MuseoSans_500-webfont.woff') format('woff'),
+         url('/fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('/fonts/MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+.blogtitle_typesome a,  #site-head .header_typesome .blogtitle_typesome a {
+    font-family: 'museo_sans500';
+}
+
+.newsletter-home-wrapper {
+    margin-bottom: 60px; // same as .article_typesome
+}
+
+.recent-items {
+	width: 80%;
+	max-width: 780px;
+	margin: 0 auto;
+  border-top: 2px #f6f6f6 solid;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+  &__col {
+    -webkit-flex: 1 50%;
+	  flex: 1 50%;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  ol, ul {
+      padding: 0;
+      margin-top: 0;
+      list-style-type: none;
+  }
+  
+  li {
+      font-size: 1.5rem;
+  }
+}

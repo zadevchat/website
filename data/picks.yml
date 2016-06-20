@@ -1,0 +1,614 @@
+"45":
+  - by: "Kenneth"
+    description: "JavaScript Jabber 209 TypeScript with Anders Hejlsberg"
+    url: "https://devchat.tv/js-jabber/209-jsj-typescript-with-anders-hejlsberg"
+  - by: "Len"
+    description: "Falcor"
+    url: "https://netflix.github.io/falcor/starter/what-is-falcor.html"
+  - by: "Mike"
+    description: "Tern"
+    url: "http://ternjs.net/"
+  - by: "Mike"
+    description: "The ng-show: Angular 2"
+    url: "https://www.youtube.com/watch?v=aSFfLVxT5vA"
+
+"44":
+  - by: "Kenneth"
+    description: GAAD in the Ember Community
+    url: http://emberjs.com/blog/2016/05/17/global-accessibility-awareness-day.html
+  - by: "Kenneth"
+    description: ember-a11y
+    url: https://github.com/ember-a11y/ember-a11y
+  - by: "Kenneth"
+    description: f.lux
+    url: https://justgetflux.com/
+  - by: "Kenneth"
+    description: Night shift on iOS
+    url: https://support.apple.com/en-us/HT202613
+  - by: Len
+    description: Datomic
+    url: http://www.datomic.com/
+  - by: Steve
+    description: Tenon
+    url: https://tenon.io/
+  - by: Justin
+    description: NVDA Screen Reader
+    url: http://www.nvaccess.org/
+  - by: Justin
+    description: HTML5 Outliner
+    url: https://gsnedders.html5.org/outliner/
+"41":
+  - by: Kevin
+    description: Unit testing
+    url: http://martinfowler.com/bliki/UnitTest.html
+  - by: Kevin
+    description: Test first
+    url: http://www.extremeprogramming.org/rules/testfirst.html
+  - by: Kenneth
+    description: AfrikaBurn
+    url: http://www.afrikaburn.com/
+  - by: Charlene
+    description: "Look at your infrastructure as code and give it the same tender love & care as your normal production code."
+
+"40":
+- by: Simon
+  description: "John Sculley's book autobiography at Apple Odyssey"
+  url: http://www.amazon.com/Odyssey-Pepsi-Journey-Adventure-Future/dp/0060915277
+- by: Len
+  description: Gluu (OAuth2 Server)
+  url: https://www.gluu.org/
+- by: Kevin
+  description: Fearless
+  url: http://www.amazon.com/Fearless-Undaunted-Ultimate-Sacrifice-Operator/dp/0307730700
+
+"39":
+- by: Kenneth
+  description: AfrikaBurn
+  url: http://www.afrikaburn.com
+- by: Len
+  description: Durable Queue
+  url: https://github.com/Factual/durable-queue
+- by: Rebecca
+  description: Android Weekly
+  url: http://androidweekly.net/
+- by: Rebecca
+  description: Riggaroo blog
+  url: http://riggaroo.co.za/
+- by: Kevin
+  description: Evening of Mastery
+  url: http://stream.drivenalliance.com/events/AnEveningOfMastery/
+- by: Kevin
+  description: Clean Code
+  url: http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+- by: Kevin
+  description: The Clean Coder
+  url: http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073
+- by: Kevin
+  description: Working Effectively with Legacy Code
+  url: http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052
+- by: Kevin
+  description: Refactoring
+  url: http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672
+- by: Kevin
+  description: The Deep Synergy between Testability and Good Design
+  url: https://www.youtube.com/watch?v=4cVZvoFGJTU
+
+'38':
+- by: Kenneth
+  description: pacto
+  url: https://github.com/thoughtworks/pacto
+- by: Len
+  description: miniKanren
+  url: Dan Friedman and William Byrd
+
+'37':
+- by: Kevin
+  description: Episode 26
+  url: Open Data and Civic Hacking with Jason Norwood-Young
+- by: Kenneth
+  description: Information is Beautiful
+  url: http://www.informationisbeautiful.net/
+- by: Kenneth
+  description: Minard's visualization of Napoleon's March
+  url: https://en.wikipedia.org/wiki/Charles_Joseph_Minard
+- by: Kenneth
+  description: Among the Oscar Contenders, a Host of Connections
+  url: http://nyti.ms/1N7dVzP
+- by: Len
+  description: Johannesburg Clojure Meetup
+  url: http://www.meetup.com/Johannesburg-Clojure-Meetup/events/230015106/
+- by: Jeff
+  description: The Visual Display of Quantitative Information
+  url: http://www.edwardtufte.com/tufte/books_vdqi
+- by: Jeff
+  description: OECD Better Life Index
+  url: http://www.oecdbetterlifeindex.org/
+- by: Jeff
+  description: Real time global wind map
+  url: http://earth.nullschool.net/
+
+'36':
+- by: Kenneth
+  description: Bounce
+  url: http://www.bounceinc.co.za/
+- by: Kenneth
+  description: CityROCK
+  url: http://www.cityrock.co.za/
+- by: Len
+  description: Suture
+  url: Supervision Trees for Go
+- by: Theo
+  description: Extreme Programming Explained
+  url: http://www.goodreads.com/book/show/67833.Extreme_Programming_Explained
+- by: Theo
+  description: Crucial Conversations
+  url: http://www.goodreads.com/book/show/15014.Crucial_Conversations
+- by: Theo
+  description: A Way with Words
+  url: http://www.goodreads.com/book/show/2539820.A_Way_with_Words
+- by: Mandla
+  description: elm
+  url: the best of functional programming in your browser http://elm-lang.org/
+
+'33':
+- by: Kevin
+  description: statsd
+  url: https://github.com/etsy/statsd
+- by: Kevin
+  description: Chrome Developer Tools
+  url: https://developer.chrome.com/devtools
+- by: Kenneth
+  description: High Performance Browser Networking
+  url: http://chimera.labs.oreilly.com/books/1230000000545
+- by: Mannuel
+  description: CSS Stats
+  url: http://cssstats.com/
+- by: Mannuel
+  description: Big Rig
+  url: https://github.com/GoogleChrome/big-rig
+- by: Mannuel
+  description: SpeedCurve
+  url: https://speedcurve.com/pricing/
+
+'32':
+- by: Build
+  description: Lumen
+  url: https://lumen.laravel.com/
+- by: Build
+  description: Laracasts
+  url: https://laracasts.com/
+- by: Build
+  description: Terraform by Hashicorp
+  url: https://www.terraform.io/
+- by: Kevin
+  description: Kubernetes
+  url: http://kubernetes.io/
+- by: Len
+  description: Semantic UI
+  url: http://semantic-ui.com/
+
+'31':
+- by: Kenneth
+  description: 'Ember.js NYC, Feb 2016: ember-concurrency (from 1:07:42)'
+  url: https://youtu.be/uVr5HWzecKI?t=1h7m42s
+- by: Kenneth
+  description: 'ember-concurrency: the solution to so many problems you never knew
+    you had'
+  url: https://medium.com/machty/ember-concurrency-the-solution-to-so-many-problems-you-never-knew-you-had-cce6d7731ba9#.eyr9izcsa
+- by: Ben
+  description: Rambda
+  url: http://ramdajs.com/
+- by: Ben
+  description: 'Eric Elliott: The Two Pillars of JavaScript'
+  url: https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3#.lscdsep03
+- by: Ben
+  description: 'Eric Elliott: 10 Interview Questions Every JavaScript Developer Should
+    Know'
+  url: https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95#.ok4iukaaw
+- by: Kevin
+  description: Cordies on Quirky
+  url: https://www.quirky.com/invent/243458
+
+'29':
+- by: Kevin
+  description: Russell L. Ackoff
+  url: https://en.wikipedia.org/wiki/Russell_L._Ackoff
+- by: Danie
+  description: 'Freedom from Command and Control: A Better Way to Make the Work Work'
+  url: http://amzn.com/0954618300
+- by: Danie
+  description: 'Lean Enterprise: How High Performance Organizations Innovate at Scale'
+  url: http://shop.oreilly.com/product/0636920030355.do
+- by: Danie
+  description: The Nature of Software Development
+  url: https://pragprog.com/book/rjnsd/the-nature-of-software-development
+- by: Kevin
+  description: 'Coding Horror: The Book'
+  url: http://blog.codinghorror.com/coding-horror-the-book/
+- by: Kenneth
+  description: How to Build Stable Systems
+  url: http://bit.ly/217sVkr
+
+'28':
+- by: Kevin
+  description: Johnny-Five
+  url: http://johnny-five.io
+- by: Kevin
+  description: Arduino Starter Kit
+  url: https://www.arduino.cc/en/Main/ArduinoStarterKit
+- by: Kenneth
+  description: Lanseria Airport
+  url: http://lanseria.co.za
+- by: Kenneth
+  description: Adafruit Learn Arduino Series
+  url: https://learn.adafruit.com/series/learn-arduino
+- by: Toby
+  description: Hacker News
+  url: https://news.ycombinator.com
+- by: Toby
+  description: uMatrix browser addon
+  url: https://github.com/gorhill/uMatrix
+- by: Toby
+  description: Detect and disconnect WiFi cameras in that AirBnB you're staying in
+  url: https://julianoliver.com/output/log_2015-12-18_14-39
+- by: Len
+  description: Lichess
+  url: http://en.lichess.org/
+
+'27':
+- by: Kenneth
+  description: Simple Made Easy by Rich Hickey
+  url: http://www.infoq.com/presentations/Simple-Made-Easy
+- by: Len
+  description: Structure and Interpretation of Computer Programs
+  url: http://www.sicpdistilled.com/
+- by: Len
+  description: SICP Lecture Videos
+  url: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/
+- by: Robert
+  description: emacs
+  url: https://www.gnu.org/software/emacs/
+- by: Robert
+  description: Mindfulness meditation
+  url: https://en.wikipedia.org/wiki/Mindfulness
+- by: Robert
+  description: Tim Ewald
+  url: 'Clojure: Programming with Hand Tools'
+- by: Kevin
+  description: Spacemacs
+  url: https://github.com/syl20bnr/spacemacs
+- by: Kevin
+  description: Coggle
+  url: https://coggle.it
+
+'26':
+- by: Kenneth
+  description: Bounce
+  url: http://bounceinc.co.za
+- by: Kenneth
+  description: The Revenant
+  url: https://www.youtube.com/watch?v=LoebZZ8K5N0
+- by: Len
+  description: WolfenGo
+  url: https://github.com/gdm85/wolfengo
+- by: Kevin
+  description: Pocket
+  url: https://getpocket.com
+
+'25':
+- by: Kevin
+  description: Daniel Smith (@jellym4nn)
+  url: RubyGL talk at Rubyfuza 2016
+- by: Kenneth
+  description: Buffer
+  url: http://buffer.com
+- by: Kenneth
+  description: Humble Bundle
+  url: http://humblebundle.com
+- by: Ben
+  description: Thomas was Alone
+  url: http://store.steampowered.com/app/220780/
+- by: Ben
+  description: The floor is jelly
+  url: http://store.steampowered.com/app/295750/
+- by: Ben
+  description: Ludum Dare
+  url: http://ludumdare.com/compo/
+- by: Ben
+  description: No Man's Sky
+  url: http://www.no-mans-sky.com/
+- by: Sean
+  description: GIMP
+  url: https://www.gimp.org/
+- by: Sean
+  description: Blender
+  url: https://www.blender.org/
+- by: Sean
+  description: Twine
+  url: http://twinery.org
+
+'24':
+- by: Kevin
+  description: Motherland coffee
+  url: http://www.motherlandcoffee.com
+- by: Kenneth
+  description: CityRock
+  url: http://www.cityrock.co.za
+
+'23':
+- by: Kenneth
+  description: Programming Elixir by Dave Thomas
+  url: https://pragprog.com/book/elixir/programming-elixir
+- by: Len
+  description: Org Mode for emacs
+  url: http://orgmode.org
+- by: Robert
+  description: David Wong
+  url: http://johndiesattheend.com
+- by: Robert
+  description: Devconf ZA website
+  url: http://www.devconf.co.za
+- by: Kevin
+  description: Game Programming Patterns
+  url: http://gameprogrammingpatterns.com
+
+'21':
+- by: Andre
+  description: Sysadmin Advent
+  url: http://sysadvent.blogspot.co.za/
+- by: Gabriel
+  description: Let's Encrypt
+  url: https://letsencrypt.org
+- by: Kenneth
+  description: Ulysses App
+  url: http://ulyssesapp.com/
+- by: Kenneth
+  description: SE Radio episode on Continuous Delivery
+  url: www.se-radio.net/2015/02/episode-221-jez-humble-on-continuous-delivery/
+- by: Kevin
+  description: WeeChat IRC Client
+  url: https://weechat.org/
+- by: Kevin
+  description: Let's Encrypt
+  url: https://letsencrypt.org
+- by: Len
+  description: Rundeck
+  url: http://rundeck.org/
+
+'20':
+- by: Kevin
+  description: Atom
+  url: https://atom.io/
+- by: Kevin
+  description: Rubyfuza 2016
+  url: http://www.rubyfuza.org/
+- by: Kenneth
+  description: etcd
+  url: https://github.com/coreos/etcd
+- by: Len
+  description: 99 Bottles of Beer
+  url: http://www.99-bottles-of-beer.net/
+- by: Pieter
+  description: Buildstuff conference
+  url: http://buildstuff.lt/
+- by: Pieter
+  description: Babun shell
+  url: http://babun.github.io/
+- by: Pieter
+  description: Terraform
+  url: https://github.com/hashicorp/terraform
+- by: Pieter
+  description: Packer
+  url: http://packer.io/
+
+'19':
+- by: Kevin
+  description: The Go Programming Language
+  url: https://golang.org
+- by: Kenneth
+  description: Sentry
+  url: https://getsentry.com/welcome/
+- by: Kennedy
+  description: Readme
+  url: http://readme.io
+- by: Len
+  description: The Explorer's Guild
+  url: http://www.amazon.com/The-Explorers-Guild-Passage-Shambhala/dp/1476727392
+
+'18':
+- by: Simon
+  description: Programming Elixir (book by Dave Thomas)
+  url: https://pragprog.com/book/elixir/programming-elixir
+- by: Simon
+  description: Pundit Ruby gem
+  url: https://github.com/elabs/pundit
+- by: Kenneth
+  description: GetSentry for error monitoring
+  url: https://getsentry.com
+- by: Kenneth
+  description: Kubernetes
+  url: http://kubernetes.io/
+- by: Kevin
+  description: CodeRetreat South African meetup page
+  url: http://www.meetup.com/coderetreat/
+- by: Kevin
+  description: The Clean Coder (book by Uncle Bob Martin)
+  url: http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073
+
+'17':
+- by: Len
+  description: Learn Python the Hard Way
+  url: http://learnpythonthehardway.org/
+- by: Kenneth
+  description: Netflix Scaling
+  url: http://www.scalescale.com/the-stack-behind-netflix-scaling/
+- by: Kenneth
+  description: Netflix Culture
+  url: http://www.slideshare.net/reed2001/culture-1798664
+- by: Kenneth
+  description: Ember-Pouch adapter
+  url: https://github.com/nolanlawson/ember-pouch
+- by: Kevin
+  description: Visual6502 emulator
+  url: http://www.visual6502.org/JSSim/
+- by: Kevin
+  description: Easy6502 Assembly tutorial
+  url: https://skilldrick.github.io/easy6502/
+- by: Garren
+  description: CouchDB
+  url: http://couchdb.org/
+- by: Garren
+  description: PouchDB
+  url: http://pouchdb.com/
+- by: Garren
+  description: NPM Browser
+  url: http://www.npm-browser.com/
+- by: Garren
+  description: Hoodie
+  url: http://hood.ie/
+
+'16':
+- by: Kenneth
+  description: Samson Meteor Mic
+  url: http://www.takealot.com/samson-meteor-mic-usb-studio-microphone/PLID36962660
+- by: Kenneth
+  description: Meetup
+  url: http://www.meetup.com
+- by: Gabriel
+  description: A podcast where musicians take apart their songs, and piece by piece,
+    tell the story of how they were made.
+  url: http://songexploder.net/
+- by: Gabriel
+  description: Star Wars Sphero Droid
+  url: http://www.sphero.com/starwars
+- by: Gabriel
+  description: Rubyfuza 2016 CFP site
+  url: http://cfp.rubyfuza.org/events/rubyfuza-2016-cfp
+- by: Kevin
+  description: Steelseries Sensei
+  url: http://steelseries.com/gaming-mice/sensei
+- by: Kevin
+  description: Neat Bumblebee Mic
+  url: http://neatmic.com/bee/bumblebee-microphone
+
+'15':
+- by: Len
+  description: The Orbit in Braamfontein (Go support local music!)
+- by: Kenneth
+  description: Kubernetes
+  url: http://www.kubernetes.io
+- by: Kenneth
+  description: Stellenbrau Jonkers Weiss
+  url: http://stellenbrau.co.za/pages/our-beers.php
+- by: Kevin
+  description: Extreme Programming Explained
+  url: http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658
+
+'8':
+- by: Len
+  description: .Net Repo on GitHub
+  url: https://github.com/dotnet
+- by: Len
+  description: C# Design Meeting Notes
+  url: https://github.com/dotnet/roslyn/issues/98
+- by: Rob
+  description: Apple Core
+  url: http://www.apple-cores.com/
+- by: Rob
+  description: Build
+  url: 'https://johannesburg.build15.com/ '
+- by: Rob
+  description: InterviewZen
+  url: http://www.interviewzen.com/
+- by: Pieter
+  description: SpaceMacs
+  url: https://github.com/syl20bnr/spacemacs
+- by:  Gordon
+  description: GitHub Large Binary Support
+  url: http://buff.ly/1zla5wH
+- by: Steve
+  description: ReThink DB 2.0
+  url: http://buff.ly/1zlahfk
+
+'6':
+- by: Len
+  description: Ansible
+  url: http://www.ansible.com/home
+- by: Kenneth
+  description: Shush
+  url: http://mizage.com/shush/
+- by: Kenneth
+  description: Team Zero One!
+  url: http://zero-one.io/
+- by: Gabriel
+  description: GTD 2015 revision
+  url: http://www.loot.co.za/product/david-allen-getting-things-done/dcmw-2997-g890
+- by: Gabriel
+  description: MonoDraw
+  url: http://monodraw.helftone.com/
+- by: Gabriel
+  description: AOL Reader
+  url: http://reader.aol.com/
+- by: Gabriel
+  description: Leech Block
+  url: http://www.proginosko.com/leechblock.html
+- by: Gabriel
+  description: StayFocused
+  url: https://chrome.google.com/webstore/detail/stayfocusd/laankejkbhbdhmipfmgcngdelahlfoji?hl=en
+- by: Ridhwana
+  description: EggscellentApp
+  url: http://www.eggscellentapp.com/
+- by: Steven
+  description: 'Tom Dale: Stop Breaking the Web'
+  url: https://www.youtube.com/watch?v=OSEXpsVcTxI
+
+'5':
+- by: Steve
+  description: Game of Thrones Episode 3 by TellTalegames
+  url: 'https://www.telltalegames.com/gameofthrones/ '
+- by: Steve
+  description: The 5 Dysfunctions of a Team by Patrick Lencioni
+  url: http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756
+- by: Pieter
+  description: Vagrant
+  url: https://www.vagrantup.com/
+- by: Paul
+  description: MeteorJS
+  url: 'https://www.meteor.com/ '
+- by: Paul
+  description: Unbreakable Kimmy Schmidt
+  url: http://www.imdb.com/title/tt3339966/
+
+'4':
+- by: Len
+  description: Go
+  url: https://golang.org/ 
+- by: Len
+  description: Atom Editor
+  url: https://atom.io/
+- by: Steven
+  description: Ruby Rogues Ep 200
+  url: http://devchat.tv/ruby-rogues/200-rr-200th-episode-free-for-all-
+
+'3':
+- by: Kenneth
+  description: 'Ember.land podcast'
+  url: http://www.ember.land/
+- by: Kenneth
+  description: EmberConf Keynote
+  url: https://youtu.be/o12-90Dm-Qs 
+- by: Kenneth
+  description: EmberConf 2015 TDD by example
+  url: https://www.youtube.com/watch?v=2b1vcg_XSR8 
+- by: Kenneth
+  description: Rock 'n Roll with Ember.js
+  url: http://balinterdi.com/rock-and-roll-with-emberjs/
+- by: Kenneth
+  description: Untappd
+  url: https://untappd.com/
+- by: Pieter
+  description: ZA Developers Slack Team
+  url: https://zadevelopers.slack.com/
+- by: Steve
+  description: Rob Conery's Mastering your own Domain course
+  url: http://www.pluralsight.com/courses/master-domain

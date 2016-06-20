@@ -1,0 +1,40 @@
+---
+title: Podcast Picks
+---
+
+<header class="site-head" style="background-image: url(<%= image_path('cover-full.jpg') %>)">
+	<div class="vertical">
+		<div role='banner' class="header_typesome">
+      <a class="logo_typesome" href="/"><img src="<%= image_path('zadevchat.png') %>" alt="ZADevChat" /></a>
+			<h1 class="blogtitle_typesome">
+			<a title="ZADevChat" href='/'>
+			The ZADevChat Podcast
+			</a>
+			</h1>
+			<p class="blogdescription_typesome">
+A weekly panel discussion with topics around the South African software developer community. Regular panelists are Len Weincier, Kenneth Kalmer and Kevin McKelvin.
+			</p>
+		</div>
+	</div>
+</header>
+
+<main class="main_typesome" role="main">
+    <article class="article_typesome">
+        <header class="posthreader_typesome">
+          <h2 class="posttile_typesome">Podcast Picks</h2>
+        </header>
+
+        <div class="postcontent_typesome">
+            <p>Here are all the picks from our panelists</p>
+
+            <% data.picks.each do |number, picks| %>
+                <h3 class="posttitle_typesome">
+                    <% episode = sitemap.find_resource_by_path("podcast/#{number}.html") %>
+                    <%= link_to episode.title, episode %>
+                </h3>
+                <%= partial :picks_by_guest, locals: { picks: picks } %>
+            <% end %>
+        </div>
+    </article>
+
+</main>

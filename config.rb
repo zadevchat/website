@@ -1,5 +1,4 @@
-require "dotenv"
-Dotenv.load
+Time.zone = "Africa/Johannesburg"
 
 ###
 # Page options, layouts, aliases and proxies
@@ -95,6 +94,20 @@ end
 #     "Helping"
 #   end
 # end
+
+helpers do
+
+  def root_url
+    config[:root_url]
+  end
+
+  def image_url(source)
+    parts = [root_url, image_path(source)].compact
+    URI.join(*parts)
+  end
+
+end
+
 require "lib/sound_cloud_helpers"
 helpers SoundCloudHelpers
 
@@ -112,6 +125,8 @@ set :markdown, :tables => true, :autolink => true
 
 # Build-specific configuration
 configure :build do
+  set :root_url, "https://zadevchat.io"
+
   activate :asset_hash
   activate :minify_css
   activate :minify_javascript

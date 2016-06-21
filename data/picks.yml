@@ -1,54 +1,75 @@
+"46":
+- by: Kenneth
+  description: Dremel 4000 rotary tool
+  url: http://www.dremeleurope.com/za/en/dremel%C2%AE4000-6014-ocs-c/
+- by: Kenneth
+  description: Dremel Versatip
+  url: http://www.dremeleurope.com/za/en/dremel%C2%AEversatip-6124-ocs-c/
+- by: Kevin
+  description: Griffin Elevator
+  url: https://griffintechnology.com/us/elevator
+- by: Rishal
+  description: Code Off - new challenge almost every week
+  url: https://github.com/prolific-idea/Code-Off
+- by: Rishal
+  description: Monthly AI Meetup
+  url: http://www.meetup.com/ArtificialIntelligenceZA/
+- by: Rishal
+  description: Hivemind
+  url: http://hivemind.prolificidea.com/
+
 "45":
-  - by: "Kenneth"
-    description: "JavaScript Jabber 209 TypeScript with Anders Hejlsberg"
-    url: "https://devchat.tv/js-jabber/209-jsj-typescript-with-anders-hejlsberg"
-  - by: "Len"
-    description: "Falcor"
-    url: "https://netflix.github.io/falcor/starter/what-is-falcor.html"
-  - by: "Mike"
-    description: "Tern"
-    url: "http://ternjs.net/"
-  - by: "Mike"
-    description: "The ng-show: Angular 2"
-    url: "https://www.youtube.com/watch?v=aSFfLVxT5vA"
+- by: "Kenneth"
+  description: "JavaScript Jabber 209 TypeScript with Anders Hejlsberg"
+  url: "https://devchat.tv/js-jabber/209-jsj-typescript-with-anders-hejlsberg"
+- by: "Len"
+  description: "Falcor"
+  url: "https://netflix.github.io/falcor/starter/what-is-falcor.html"
+- by: "Mike"
+  description: "Tern"
+  url: "http://ternjs.net/"
+- by: "Mike"
+  description: "The ng-show: Angular 2"
+  url: "https://www.youtube.com/watch?v=aSFfLVxT5vA"
 
 "44":
-  - by: "Kenneth"
-    description: GAAD in the Ember Community
-    url: http://emberjs.com/blog/2016/05/17/global-accessibility-awareness-day.html
-  - by: "Kenneth"
-    description: ember-a11y
-    url: https://github.com/ember-a11y/ember-a11y
-  - by: "Kenneth"
-    description: f.lux
-    url: https://justgetflux.com/
-  - by: "Kenneth"
-    description: Night shift on iOS
-    url: https://support.apple.com/en-us/HT202613
-  - by: Len
-    description: Datomic
-    url: http://www.datomic.com/
-  - by: Steve
-    description: Tenon
-    url: https://tenon.io/
-  - by: Justin
-    description: NVDA Screen Reader
-    url: http://www.nvaccess.org/
-  - by: Justin
-    description: HTML5 Outliner
-    url: https://gsnedders.html5.org/outliner/
+- by: "Kenneth"
+  description: GAAD in the Ember Community
+  url: http://emberjs.com/blog/2016/05/17/global-accessibility-awareness-day.html
+- by: "Kenneth"
+  description: ember-a11y
+  url: https://github.com/ember-a11y/ember-a11y
+- by: "Kenneth"
+  description: f.lux
+  url: https://justgetflux.com/
+- by: "Kenneth"
+  description: Night shift on iOS
+  url: https://support.apple.com/en-us/HT202613
+- by: Len
+  description: Datomic
+  url: http://www.datomic.com/
+- by: Steve
+  description: Tenon
+  url: https://tenon.io/
+- by: Justin
+  description: NVDA Screen Reader
+  url: http://www.nvaccess.org/
+- by: Justin
+  description: HTML5 Outliner
+  url: https://gsnedders.html5.org/outliner/
+
 "41":
-  - by: Kevin
-    description: Unit testing
-    url: http://martinfowler.com/bliki/UnitTest.html
-  - by: Kevin
-    description: Test first
-    url: http://www.extremeprogramming.org/rules/testfirst.html
-  - by: Kenneth
-    description: AfrikaBurn
-    url: http://www.afrikaburn.com/
-  - by: Charlene
-    description: "Look at your infrastructure as code and give it the same tender love & care as your normal production code."
+- by: Kevin
+  description: Unit testing
+  url: http://martinfowler.com/bliki/UnitTest.html
+- by: Kevin
+  description: Test first
+  url: http://www.extremeprogramming.org/rules/testfirst.html
+- by: Kenneth
+  description: AfrikaBurn
+  url: http://www.afrikaburn.com/
+- by: Charlene
+  description: "Look at your infrastructure as code and give it the same tender love & care as your normal production code."
 
 "40":
 - by: Simon

@@ -25,14 +25,17 @@ A weekly panel discussion with topics around the South African software develope
         </header>
 
         <div class="postcontent_typesome">
-            <p>Here are all the picks from our panelists</p>
+            <p>At the end of every episode we all get a turn to present a few <em>picks</em>. These can be serious or comical, technical or analogue, or anything else really.</p>
+            <p>We hope you enjoy this selection of mostly random links! If you find something useful please let us know!</p>
 
             <% data.picks.each do |number, picks| %>
+              <% episode = sitemap.find_resource_by_path("podcast/#{number}.html") %>
+              <% if episode %>
                 <h3 class="posttitle_typesome">
-                    <% episode = sitemap.find_resource_by_path("podcast/#{number}.html") %>
-                    <%= link_to episode.title, episode %>
+                  <%= link_to episode.title, episode %>
                 </h3>
                 <%= partial :picks_by_guest, locals: { picks: picks } %>
+              <% end %>
             <% end %>
         </div>
     </article>

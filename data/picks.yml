@@ -119,13 +119,13 @@
   description: pacto
   url: https://github.com/thoughtworks/pacto
 - by: Len
-  description: miniKanren
-  url: Dan Friedman and William Byrd
+  description: miniKanren - Dan Friedman and William Byrd
+  url: https://www.youtube.com/watch?v=5Q9x16uIsKA
 
 '37':
 - by: Kevin
-  description: Episode 26
-  url: Open Data and Civic Hacking with Jason Norwood-Young
+  description: Episode 26 - Open Data and Civic Hacking with Jason Norwood-Young
+  url: https://soundcloud.com/zadevchat/episode-26-open-data-and-civic-hacking-with-jason-norwood-young
 - by: Kenneth
   description: Information is Beautiful
   url: http://www.informationisbeautiful.net/
@@ -156,8 +156,8 @@
   description: CityROCK
   url: http://www.cityrock.co.za/
 - by: Len
-  description: Suture
-  url: Supervision Trees for Go
+  description: Suture - Supervision Trees for Go
+  url: http://www.jerf.org/iri/post/2930
 - by: Theo
   description: Extreme Programming Explained
   url: http://www.goodreads.com/book/show/67833.Extreme_Programming_Explained
@@ -168,8 +168,8 @@
   description: A Way with Words
   url: http://www.goodreads.com/book/show/2539820.A_Way_with_Words
 - by: Mandla
-  description: elm
-  url: the best of functional programming in your browser http://elm-lang.org/
+  description: elm - the best of functional programming in your browser
+  url:http://elm-lang.org/
 
 '33':
 - by: Kevin
@@ -270,7 +270,7 @@
   description: uMatrix browser addon
   url: https://github.com/gorhill/uMatrix
 - by: Toby
-  description: Detect and disconnect WiFi cameras in that AirBnB you're staying in
+  description: "Detect and disconnect WiFi cameras in that AirBnB you're staying in"
   url: https://julianoliver.com/output/log_2015-12-18_14-39
 - by: Len
   description: Lichess
@@ -294,7 +294,7 @@
   url: https://en.wikipedia.org/wiki/Mindfulness
 - by: Robert
   description: Tim Ewald
-  url: 'Clojure: Programming with Hand Tools'
+  url: Clojure: Programming with Hand Tools
 - by: Kevin
   description: Spacemacs
   url: https://github.com/syl20bnr/spacemacs
@@ -318,8 +318,7 @@
 
 '25':
 - by: Kevin
-  description: Daniel Smith (@jellym4nn)
-  url: RubyGL talk at Rubyfuza 2016
+  description: Daniel Smith (@jellym4nn) - RubyGL talk at Rubyfuza 2016
 - by: Kenneth
   description: Buffer
   url: http://buffer.com
@@ -378,19 +377,19 @@
   description: Sysadmin Advent
   url: http://sysadvent.blogspot.co.za/
 - by: Gabriel
-  description: Let's Encrypt
+  description: "Let's Encrypt"
   url: https://letsencrypt.org
 - by: Kenneth
   description: Ulysses App
   url: http://ulyssesapp.com/
 - by: Kenneth
   description: SE Radio episode on Continuous Delivery
-  url: www.se-radio.net/2015/02/episode-221-jez-humble-on-continuous-delivery/
+  url: http://www.se-radio.net/2015/02/episode-221-jez-humble-on-continuous-delivery/
 - by: Kevin
   description: WeeChat IRC Client
   url: https://weechat.org/
 - by: Kevin
-  description: Let's Encrypt
+  description: "Let's Encrypt"
   url: https://letsencrypt.org
 - by: Len
   description: Rundeck

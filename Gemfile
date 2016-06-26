@@ -24,3 +24,4 @@ gem "builder", "~> 3.0"
 
 gem "sass"
 gem "ruby-oembed"
+gem "soundcloud"

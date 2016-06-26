@@ -1,3 +1,10 @@
+begin
+  require "dotenv"
+  Dotenv.load
+rescue LoadError => e
+  puts "Failed to load 'dotenv', hoping your environment is setup"
+end
+
 Time.zone = "Africa/Johannesburg"
 
 ###

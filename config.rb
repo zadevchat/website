@@ -85,7 +85,7 @@ end
 # UA
 activate :google_analytics do |ga|
   ga.tracking_id = 'UA-79554082-1'
-  ga.development = !build?
+  ga.development = false
 end
 
 # Methods defined in the helpers block are available in templates

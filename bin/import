@@ -12,13 +12,14 @@ rescue LoadError => e
   puts "Failed to load 'dotenv', hoping your environment is setup"
 end
 
+require "pp"
 require "soundcloud"
 require "yaml"
 
 client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
 track = client.get('/resolve', url: ARGV[0])
 
-puts track.inspect if $DEBUG
+pp track if $DEBUG
 
 #
 # Extract the data
@@ -26,7 +27,7 @@ puts track.inspect if $DEBUG
 
 title = track["title"]
 number = title.scan(/\d+/).first
-created_at = track["created_at"].split(/\s+/).first
+released_at = Date.new(track["release_year"], track["release_month"], track["release_day"])
 permalink = track["permalink_url"]
 description = track["description"]
 hosts = description.scan(/Kenneth|Kevin|Len/).uniq
@@ -44,7 +45,7 @@ File.open("source/podcast/#{number}.html.md", "w+") do |f|
   f.write(<<-EOF)
 ---
 title: "#{title}"
-date: #{created_at}
+date: #{released_at.strftime("%Y/%m/%d")}
 soundcloud_url: #{permalink}
 hosts:
 #{hosts_data}
@@ -61,9 +62,7 @@ EOF
     picks_start += 1
 
     # Picks?
-    if line.match /(Pick list|our picks|Picks)/
-      break
-    end
+    break if line.match /(Pick list|our picks|Picks)/
 
     f.write line + "\n"
   end
@@ -100,11 +99,14 @@ EOF
 
     else
       by = line.scan(/[\w]+/).first
+
     end
 
   end
 
   # Write our the picks in the file for review
-  f.write "\n\n## Picks YAML\n\n"
-  f.write({ number => picks }.to_yaml)
+  if picks.any?
+    f.write "\n\n## Picks YAML\n\n"
+    f.write({ number => picks }.to_yaml)
+  end
 end

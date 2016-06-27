@@ -169,7 +169,7 @@
   url: http://www.goodreads.com/book/show/2539820.A_Way_with_Words
 - by: Mandla
   description: elm - the best of functional programming in your browser
-  url:http://elm-lang.org/
+  url: http://elm-lang.org/
 
 '33':
 - by: Kevin
@@ -294,7 +294,7 @@
   url: https://en.wikipedia.org/wiki/Mindfulness
 - by: Robert
   description: Tim Ewald
-  url: Clojure: Programming with Hand Tools
+  url: "Clojure: Programming with Hand Tools"
 - by: Kevin
   description: Spacemacs
   url: https://github.com/syl20bnr/spacemacs

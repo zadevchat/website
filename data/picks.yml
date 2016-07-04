@@ -310,8 +310,8 @@
   description: Mindfulness meditation
   url: https://en.wikipedia.org/wiki/Mindfulness
 - by: Robert
-  description: Tim Ewald
-  url: "Clojure: Programming with Hand Tools"
+  description: Tim Ewald - "Clojure: Programming with Hand Tools"
+  url: https://www.youtube.com/watch?v=ShEez0JkOFw
 - by: Kevin
   description: Spacemacs
   url: https://github.com/syl20bnr/spacemacs

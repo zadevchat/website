@@ -1,3 +1,11 @@
+'48':
+- by: Robert
+  description: '"Learning Mindset" (Mindset by Carol Dweck)'
+  url: http://mindsetonline.com/
+- by: Robert
+  description: Lego
+  url: http://www.lego.com/
+
 "47":
 - by: Taariq
   description: The SoundCloud Client in React + Redux

@@ -1,5 +1,31 @@
+'51':
+- by: Kenneth
+  description: "How much does the president really matter? (Rebroadcast)"
+  url: "http://freakonomics.com/podcast/much-president-really-matter-rebroadcast/"
+- by: Kevin
+  description: "Blameless PostMortems and a Just Culture"
+  url: https://codeascraft.com/2012/05/22/blameless-postmortems/
+- by: Janco
+  description: C2 Wiki
+  url: "http://c2.com"
+- by: Janco
+  description: Refactoring by Martin Fowler
+  url: http://martinfowler.com/books/refactoring.html
+- by: Janco
+  description: No Silver Bullet
+  url: https://en.wikipedia.org/wiki/No_Silver_Bullet
+- by: Oz
+  description: "Software Craftsmanship: The New Imperative"
+  url: http://www.goodreads.com/book/show/1035377.Software_Craftsmanship
+- by: Oz
+  description: "@HistoryInPics"
+  url: https://twitter.com/HistoryInPics
+- by: Oz
+  description: "Let's Test South Africa 2-4 Oct 2016"
+  url: "http://lets-test.com/?page_id=4964"
+
 '50':
-- by: Kevin 
+- by: Kevin
   description: "Everyones playing Pokemon again, blink 182 has a #1 song, a Clinton's running for president, Tarzan in theaters. Welcome to 2001"
   url: https://twitter.com/connahomie/status/752279436435660800
 - by: Kevin
@@ -664,7 +690,7 @@
 '4':
 - by: Len
   description: Go
-  url: https://golang.org/ 
+  url: https://golang.org/
 - by: Len
   description: Atom Editor
   url: https://atom.io/
@@ -678,10 +704,10 @@
   url: http://www.ember.land/
 - by: Kenneth
   description: EmberConf Keynote
-  url: https://youtu.be/o12-90Dm-Qs 
+  url: https://youtu.be/o12-90Dm-Qs
 - by: Kenneth
   description: EmberConf 2015 TDD by example
-  url: https://www.youtube.com/watch?v=2b1vcg_XSR8 
+  url: https://www.youtube.com/watch?v=2b1vcg_XSR8
 - by: Kenneth
   description: Rock 'n Roll with Ember.js
   url: http://balinterdi.com/rock-and-roll-with-emberjs/

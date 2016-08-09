@@ -1,3 +1,20 @@
+'52':
+- by: Kenneth
+  description: "Pokémon Go"
+  url: "http://www.pokemongo.com/"
+- by: Len
+  description: SuperCollider
+  url: http://supercollider.github.io/
+- by: Mike
+  description: '"Learning Mindset" (Mindset by Carol Dweck)'
+  url: http://mindsetonline.com/
+- by: Mike
+  description: "Wacaco Minipresso"
+  url: "https://www.wacaco.com/"
+- by: Mike
+  description: "Adventures in Angular"
+  url: "https://devchat.tv/adv-in-angular"
+
 '51':
 - by: Kenneth
   description: "How much does the president really matter? (Rebroadcast)"

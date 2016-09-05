@@ -1,0 +1,25 @@
+<%= Middleman::FileRenderer.new(@app, current_page.file_descriptor[:full_path].to_s).template_data_for_file %>
+
+<% if picks = data.picks[ current_article.data.episode ] -%>
+And finally our picks
+<% picks_by_guest(picks).each do |by, their_picks| -%>
+
+<%= by %>:
+<% their_picks.each do |pick| -%>
+<% if pick["url"].blank? %>
+* <%= pick["description"] %>
+<% else %>
+* <%= pick["description"] %> - <%= pick["url"] %>
+<% end -%>
+<% end -%>
+<% end -%>
+<% end -%>
+
+Thanks for listening!
+
+Stay in touch:
+
+* Website & newsletter - https://zadevchat.io
+* Socialize - https://twitter.com/zadevchat & http://facebook.com/ZADevChat/
+* Suggestions and feedback - https://github.com/zadevchat/ping
+* Subscribe and rate in iTunes - http://bit.ly/zadevchat-itunes

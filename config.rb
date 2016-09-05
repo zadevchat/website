@@ -69,6 +69,13 @@ activate :blog do |blog|
   blog.page_link = "page/{num}"
 end
 
+activate :plaintext do |c|
+  c.layout = "shownotes.text"
+  c.handle_file = lambda do |resource|
+    resource.path.start_with?("podcast/") && resource.path.end_with?(".html")
+  end
+end
+
 page "/feed.xml", layout: false
 
 # Reload the browser automatically whenever files change

@@ -15,6 +15,7 @@ gem "middleman-livereload"
 gem "middleman-disqus"
 gem "middleman-google-analytics"
 gem 'middleman-search_engine_sitemap'
+gem "middleman-plaintext"
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem 'nokogiri'

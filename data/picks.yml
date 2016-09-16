@@ -1,3 +1,20 @@
+'54':
+- by: Kenneth
+  description: "Big Red Barn (trail runs & mountain biking)"
+  url: "http://www.thebigredbarn.co.za/"
+- by: Kenneth
+  description: "Zombies, run!"
+  url: "https://zombiesrungame.com"
+- by: Kevin
+  description: "Ubuntu"
+  url: "http://www.ubuntu.com"
+- by: Armand
+  description: "Cape Town Running Company Wolfpack Trails"
+  url: "http://www.capetownrunningco.com/"
+- by: Armand
+  description: "Kibana"
+  url: "https://www.elastic.co/products/kibana"
+
 '53':
 - by: Kevin
   description: "Humanscale Float desk"

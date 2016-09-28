@@ -1,3 +1,26 @@
+'55':
+- by: Guillaume
+  description: "Batman and Ethan"
+  url: "http://www.bbc.co.uk/programmes/b0709v4m"
+- by: Guillaume
+  description: "Neural Networks and Deep Learning"
+  url: "http://neuralnetworksanddeeplearning.com/"
+- by: Guillaume
+  description: Chasing Cats
+  url: "http://myplace.frontier.com/~r.bond/cats/cats.htm"
+- by: Len
+  description: Yetibot
+  url: yetibot.com
+- by: Chantal
+  description: "DESIGN <for> HACKERS"
+  url: http://designforhackers.com/
+- by: Kenneth
+  description: Deep Learning for Java
+  url: "http://deeplearning4j.org/"
+- by: Kenneth
+  description: "The Man Who Knew Infinity"
+  url: "https://en.wikipedia.org/wiki/The_Man_Who_Knew_Infinity_(film)"
+
 '54':
 - by: Kenneth
   description: "Big Red Barn (trail runs & mountain biking)"

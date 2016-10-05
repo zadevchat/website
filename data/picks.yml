@@ -1,3 +1,23 @@
+'56':
+- by: Simon
+  description: "Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley"
+  url: http://www.goodreads.com/book/show/28259132-chaos-monkeys
+- by: Kenneth
+  description: 22seven
+  url: https://www.22seven.com
+- by: Kenneth
+  description: Productive
+  url: http://productiveapp.io/
+- by: Chantal
+  description: Classic Programmer Paintings
+  url: http://classicprogrammerpaintings.com/
+- by: Len
+  description: µLisp
+  url: http://www.ulisp.com/
+- by: Kevin
+  description: intermezzOS
+  url: https://intermezzos.github.io/
+
 '55':
 - by: Guillaume
   description: "Batman and Ethan"

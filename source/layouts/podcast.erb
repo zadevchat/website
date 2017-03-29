@@ -50,6 +50,14 @@
 		<div class="postcontent_typesome">
       <%= soundcloud_embed_large(current_article.data.soundcloud_url) %>
 
+        <% if current_article.data.sponsor_banner %>
+            <div class="sponsored-episode-banner">
+                <% link_to current_article.data.sponsor_url, target: "_blank" do %>
+                    <%= image_tag current_article.data.sponsor_banner, alt: current_article.data.sponsor_alt %>
+                <% end %>
+            </div>
+        <% end %>
+
       <%= yield %>
 
       <% if picks = data.picks[ current_article.data.episode ] %>

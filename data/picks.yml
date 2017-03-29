@@ -1,3 +1,35 @@
+'57':
+- by: Kevin
+  description: 144Hz monitors for gaming
+- by: Kevin
+  description: Ubuntu Desktop Linux
+  url: "http://www.ubuntu.com"
+- by: Chantal
+  description: TYCHO
+  url: "http://tychomusic.com/"
+- by: Kenneth
+  description: The Hundred-Foot Journey
+  url: "http://www.imdb.com/title/tt2980648/"
+- by: Kenneth
+  description: FOKOFPOLISIEKAR
+  url: "http://www.fokofpolisiekar.co.za/"
+- by: Kenneth
+  description: "Rokoff CD+DVD"
+- by: Kenneth
+  description: "MK Hoordosis"
+- by: Simon
+  description: "Conflict-free Replicated Data Type, or CRDT"
+  url: "https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type"
+- by: Simon & Neil
+  description: Sphinx documentation
+  url: "http://www.sphinx-doc.org/"
+- by: Simon & Neil
+  description: "Read the Docs"
+  url: "https://readthedocs.org/"
+- by: David
+  description: Radiooooo
+  url: "http://radiooooo.com/"
+
 '56':
 - by: Simon
   description: "Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley"

@@ -52,3 +52,14 @@ h1, h2, h3, h4, h5, h6,
       font-size: 1.5rem;
   }
 }
+
+.center {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; /* works with row or column */
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}

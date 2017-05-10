@@ -1,3 +1,20 @@
+'58':
+- by: Kenneth
+  description: "Code Retreat"
+  url: "https://www.meetup.com/coderetreat"
+- by: Kevin
+  description: "Google Cloud Platform"
+  url: "https://cloud.google.com"
+- by: Chantal
+  description: "Have I been pwned?"
+  url: "https://haveibeenpwned.com/"
+- by: Chantal
+  description: "KeyPass"
+  url: "http://keepass.info/"
+- by: Kevin Trethewey
+  description: "Scott Adams: How to Fail at Almost Everything and Still Win Big"
+  url: "http://blog.dilbert.com/post/102964983301/how-to-fail-at-almost-everything-and-still-win"
+
 '57':
 - by: Kevin
   description: 144Hz monitors for gaming

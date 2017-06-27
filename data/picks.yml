@@ -1,3 +1,32 @@
+'60':
+- by: Kenneth
+  description: Loxton Lager
+  url: "http://www.loxtonlager.co.za/"
+- by: Kenneth
+  description: Borderlands
+  url: "https://borderlandsthegame.com/"
+- by: Kevin
+  description: The Ultimate Guide to Building Database-Driven Apps with Go
+  url: "https://www.vividcortex.com/resources/the-ultimate-guide-to-building-database-driven-apps-with-go"
+- by: Chantal
+  description: "rAge Expo"
+  url: "http://www.rageexpo.co.za/"
+- by: Chantal
+  description: Earth View from Google Earth
+  url: "https://chrome.google.com/webstore/detail/earth-view-from-google-ea/bhloflhklmhfpedakmangadcdofhnnoh?hl=en"
+- by: Chantal
+  description: "Chanel's Data Center Collection by Karl Lagerfeld "
+  url: "https://qz.com/799962/chanels-karl-lagerfeld-made-a-data-center-into-the-most-glamorous-runway-in-fashion/"
+- by: Lance
+  description: "MbientLab"
+  url: https://mbientlab.com
+- by: Lance
+  description: "NodeMcu"
+  url: "http://nodemcu.com/index_en.html"
+- by: Lance
+  description: Purr Programming
+  url: "http://purrprogramming.com/"
+
 '59':
 - by: Len
   description: OneOps by WalmartLabs

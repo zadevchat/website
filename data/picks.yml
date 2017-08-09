@@ -1,3 +1,20 @@
+'61':
+- by: Kenneth
+  description: Tariffic
+  url: "https://www.tariffic.com/"
+- by: Kenneth
+  description: "Pink-I.T"
+  url: "http://pink-it.co.za/"
+- by: Kevin
+  description: Datadog
+  url: "https://www.datadoghq.com/"
+- by: Tim
+  description: Last Week Tonight with John Oliver
+  url: "http://www.hbo.com/last-week-tonight-with-john-oliver"
+- by: Tim
+  description: Docker Swarm
+  url: "https://docs.docker.com/engine/swarm/"
+
 '60':
 - by: Kenneth
   description: Loxton Lager

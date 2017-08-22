@@ -1,3 +1,20 @@
+'62':
+- by: Gail
+  description: Kaggle
+  url: "https://www.kaggle.com/"
+- by: Gail
+  description: Microsoft Research
+  url: "https://www.microsoft.com/en-us/research/"
+- by: Len
+  description: TensorFlow
+  url: "https://www.tensorflow.org/"
+- by: Chantal
+  description: Boomerang for Gmail
+  url: "http://www.boomeranggmail.com/"
+- by: Kenneth
+  description: Theory of Everything
+  url: "https://toe.prx.org"
+
 '61':
 - by: Kenneth
   description: Tariffic

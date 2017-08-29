@@ -1,3 +1,28 @@
+'69':
+- by: Ruddy
+  description: Go Programming Language
+  url: "https://golang.org/"
+- by: Ruddy
+  description: Pink-IT
+  url: "http://pink-it.co.za/"
+- by: Chantal
+  description: "Tracy Chou / @triketora"
+  url: "https://twitter.com/triketora"
+- by: Chantal
+  description: "Sailor Mercury / @sailorhg"
+  url: "https://twitter.com/sailorhg"
+- by: Kenneth
+  description: "#ILookLikeAnEngineer"
+  url: "https://twitter.com/search?q=%23ILookLikeAnEngineer"
+- by: Kenneth
+  description: Diversify who you follow on Twitter to gain different perspectives!
+- by: Kenneth
+  description: Wonder Woman (2017)
+  url: "https://en.wikipedia.org/wiki/Wonder_Woman_(2017_film)"
+- by: Kenneth
+  description: Amazing Twitter thread on Wonder Woman costumes
+  url: "https://twitter.com/AWeaverWrites/status/878967719072288768"
+
 '67':
 - by: Chantal
   description: "Accidentally destroyed production database on first day of a job, and was told to leave, on top of this i was told by the CTO that they need to get legal involved, how screwed am i?"

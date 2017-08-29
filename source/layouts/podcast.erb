@@ -17,13 +17,24 @@
 <% end %>
 
 <% wrap_layout :layout do %>
-  <header id="site-head" style="background-image: url(<%= image_path 'cover-narrow.png' %>)" class="site-head post-2">
+  <%
+    if current_article.data.women_in_tech
+      cover = 'cover-women.jpg'
+      icon  = 'zadevchat-women.png'
+    else
+      cover = 'cover-narrow.png'
+      icon  = 'zadevchat.png'
+    end
+  %>
+  <header id="site-head" style="background-image: url(<%= image_path cover %>)" class="site-head post-2">
   	<div class="vertical">
   		<div role='banner' class="header_typesome">
-        <a class="logo_typesome" href="/"><img src="<%= image_path('zadevchat.png') %>" alt="The ZADevChat Podcast" /></a>
+        <a class="logo--speech-bubble" href="/">
+          <img src="<%= image_path icon %>" alt="The ZADevChat Podcast" />
+        </a>
   			<h1 class="blogtitle_typesome">
         <a title="ZADevChat" href='/'>
-        The ZADevChat Podcast
+          <%= current_article.title %>
   			</a>
   			</h1>
   		</div>
@@ -44,7 +55,7 @@
         <% end %>
 			</ul>
 
-      <h1 class="posttitle_typesome"><%= current_article.title %></h1>
+      <!-- <h1 class="posttitle_typesome"><%= current_article.title %></h1> -->
 		</header>
 
 		<div class="postcontent_typesome">

@@ -1,3 +1,20 @@
+'71':
+- by: Jade
+  description: Kaggle
+  url: "https://www.kaggle.com"
+- by: Jade
+  description: "Sunspring | A Sci-Fi Short Film" 
+  url: "https://www.youtube.com/watch?v=LY7x2Ihqjmc"
+- by: Chantal
+  description: "For Computers, Too, It's Hard to Learn to Speak Chinese"
+  url: "https://www.technologyreview.com/s/608249/for-computers-too-its-hard-to-learn-to-speak-chinese/?set=608337"
+- by: Kenneth
+  description: Westworld
+  url: "https://en.wikipedia.org/wiki/Westworld_(TV_series)"
+- by: Len
+  description: Instaparse
+  url: "https://github.com/Engelberg/instaparse"
+
 '69':
 - by: Ruddy
   description: Go Programming Language

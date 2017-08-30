@@ -98,3 +98,29 @@ h1, h2, h3, h4, h5, h6,
     width:100%;
     height:100%;
 }
+
+
+.women-in-tech-banner {
+    $blue: #4169E1;
+
+    padding: 1rem 0.5rem;
+    margin: 2rem 0;
+    border: 2px solid transparentize($blue, 0.5);
+    background-color: transparentize($blue, 0.98);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+
+    img {
+        display: block;
+        width: 120px;
+        height: 120px;
+        padding: 0;
+    }
+
+    &__copy {
+        color: $blue;
+        flex: 2;
+        line-height: 1em;
+    }
+}

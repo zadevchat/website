@@ -90,6 +90,17 @@
       </p>
 
       <%= partial :newsletter %>
+
+      <% if current_article.data.women_in_tech %>
+          <div class="women-in-tech-banner">
+              <%= image_tag icon %>
+              <div class="women-in-tech-banner__copy">
+                  Shining a spotlight on the amazing and
+                  <%= link_to "inspiring women", "/inspiring-women" %>
+                  in our community.
+              </div>
+          </div>
+      <% end %>
 		</div>
 
 		<div class="back_typesome">

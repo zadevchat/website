@@ -34,6 +34,12 @@ A weekly panel discussion with topics around the South African software develope
             </li>
             <span></span>
 						<li class="date_typesome"><time><%= article.date.strftime("%A %e %b %Y") %></time></li>
+            <% if article.data.women_in_tech %>
+            <span></span>
+            <li class="posttags_typesome">
+              <%= link_to "Inspiring Women", "/inspiring-women" %>
+            </li>
+            <% end %>
 					</ul>
 
 					<h2 class="posttitle_typesome">
@@ -70,6 +76,14 @@ A weekly panel discussion with topics around the South African software develope
 		</article>
 
     <% if i == 0 %>
+        <div class="women-in-tech-banner">
+            <%= image_tag "zadevchat-women.png" %>
+            <div class="women-in-tech-banner__copy">
+                Shining a spotlight on the amazing and
+                <%= link_to "inspiring women", "/inspiring-women" %>
+                in our community.
+            </div>
+        </div>
         <div class="newsletter-home-wrapper">
         <%= partial :newsletter %>
         </div>

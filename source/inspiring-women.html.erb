@@ -1,0 +1,73 @@
+---
+priority: 0.9
+change_frequency: weekly
+title: "Episode Archives"
+---
+
+<header class="site-head" style="background-image: url(<%= image_path('cover-women.jpg') %>)">
+    <div class="vertical">
+        <div role='banner' class="header_typesome">
+            <a class="logo--speech-bubble" href="/"><img src="<%= image_path('zadevchat-women.png') %>" alt="ZADevChat" /></a>
+            <h1 class="blogtitle_typesome">
+                <a title="Woman in Tech" href='/woman-in-tech'>
+                    Inspiring Women
+                </a>
+            </h1>
+            <p class="blogdescription_typesome">
+                Shining a spotlight on the amazing and inspiring women in our community.
+            </p>
+        </div>
+    </div>
+</header>
+
+<main class="main_typesome" role="main">
+  <div class="women-in-tech-intro">
+    <p></p>
+  </div>
+
+  <%
+  episodes = blog('podcast').articles
+  episodes.select { |e| e.data.women_in_tech }.each_with_index do |article, i|
+  %>
+    <article class="article_typesome">
+      <header class="postheader_typesome">
+          <h2 class="posttitle_typesome">
+              <%= link_to article.title, article, rel: "bookmark" %>
+          </h2>
+          <ul>
+              <li class="name-thumb_typesome">
+                  <% link_to article do %>
+                      <%= article.data.hosts.to_sentence %>
+                  <% end %>
+              </li>
+              <span></span>
+              <li class="date_typesome"><time><%= article.date.strftime("%A %e %b %Y") %></time></li>
+          </ul>
+      </header>
+
+      <div class="postcontent_typesome">
+          <%= soundcloud_embed_flash(article.data.soundcloud_url) %>
+          <%= article.summary %>
+      </div>
+
+      <footer class="excerptfooter_typesome">
+          <section class="read_typesome">
+              <%= link_to "Read More", article, class: "more_typesome" %>
+              <span></span>
+              <%= link_to "SoundCloud", article.data.soundcloud_url, class: "more_typesome" %>
+          </section>
+
+          <section class="share_typesome">
+              <h4>Share: &nbsp;</h4>
+              <a class="fa fa-twitter-square" target="_blank" href="http://twitter.com/share?text=<%= article.title %>&url=http://zadevchat.io<%= article.url %>"><span class="hidden_typesome">Twitter</span></a>
+              <a class="fa fa-facebook-square" target="_blank" href="http://www.facebook.com/sharer.php?u=http://zadevchat.io<%= article.url %>"><span class="hidden_typesome">Facebook</span></a>
+              <a class="fa fa-google-plus-square" target="_blank" href="https://plus.google.com/share?url=http://zadevchat.io<%= article.url %>"><span class="hidden_typesome">Google+</span></a>
+          </section>
+      </footer>
+    </article>
+  <% end %>
+
+  <div class="newsletter-home-wrapper">
+    <%= partial :newsletter %>
+  </div>
+</main>

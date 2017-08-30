@@ -48,7 +48,11 @@
 
 		<header class="postheader_typesome">
 			<ul>
-        <li class="name-thumb_typesome"><a href="/"><%= current_article.data.hosts.to_sentence %></a></li>
+        <li class="name-thumb_typesome">
+          <% link_to current_article do %>
+            <%= current_article.data.hosts.to_sentence %>
+          <% end %>
+        </li>
         <span></span>
         <li><time class="date_typesome"><%= current_article.date.strftime("%A %e %b %Y") %></time></li>
         <%- tags = current_article.tags %>

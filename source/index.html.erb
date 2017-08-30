@@ -27,7 +27,11 @@ A weekly panel discussion with topics around the South African software develope
 
 				<header class="postheader_typesome">
 					<ul>
-            <li class="name-thumb_typesome"><a href="/"><%= article.data.hosts.to_sentence %></a></li>
+            <li class="name-thumb_typesome">
+              <% link_to article do %>
+                <%= article.data.hosts.to_sentence %>
+              <% end %>
+            </li>
             <span></span>
 						<li class="date_typesome"><time><%= article.date.strftime("%A %e %b %Y") %></time></li>
 					</ul>

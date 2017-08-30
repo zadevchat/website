@@ -1,7 +1,19 @@
+<%
+  if current_article.data.women_in_tech
+    header = 'cover-women.jpg'
+    cover = 'cover-women-500x500.jpg'
+    icon  = 'zadevchat-women.png'
+  else
+    header = 'cover-narrow.png'
+    cover = 'cover-500x500.jpg'
+    icon  = 'zadevchat.png'
+  end
+%>
+
 <% content_for :head do %>
     <meta property="og:title" content="<%= current_article.title %>">
     <meta property="og:type" content="music.song">
-    <meta property="og:image" content="<%= image_url 'cover-500.jpg' %>">
+    <meta property="og:image" content="<%= image_url cover %>">
     <meta property="og:image:width" content="500">
     <meta property="og:image:height" content="500">
     <meta property="og:image:type" content="image/jpeg">
@@ -11,22 +23,13 @@
     <meta property="twitter:title" content="<%= current_article.title %>">
     <meta property="twitter:description" content="<%= strip_tags current_article.summary %>">
     <meta property="twitter:player" content="<%= h soundcloud_twitter_player_url(current_article.data.soundcloud_url) %>">
-    <meta property="twitter:image" content="<%= image_url 'cover-500.jpg' %>">
+    <meta property="twitter:image" content="<%= image_url cover %>">
     <meta property="twitter:player:height" content="400">
     <meta property="twitter:player:width" content="435">
 <% end %>
 
 <% wrap_layout :layout do %>
-  <%
-    if current_article.data.women_in_tech
-      cover = 'cover-women.jpg'
-      icon  = 'zadevchat-women.png'
-    else
-      cover = 'cover-narrow.png'
-      icon  = 'zadevchat.png'
-    end
-  %>
-  <header id="site-head" style="background-image: url(<%= image_path cover %>)" class="site-head post-2">
+  <header id="site-head" style="background-image: url(<%= image_path header %>)" class="site-head post-2">
   	<div class="vertical">
   		<div role='banner' class="header_typesome">
         <a class="logo--speech-bubble" href="/">

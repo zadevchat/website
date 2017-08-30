@@ -1,8 +1,24 @@
 ---
 priority: 0.9
 change_frequency: weekly
-title: "Episode Archives"
+title: "Inspiring Women"
 ---
+
+
+<% content_for :head do %>
+    <meta property="og:title" content="Inspiring Women - The ZADevChat Podcast">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="<%= image_url "cover-women-500x500.jpg" %>">
+    <meta property="og:image:width" content="1921">
+    <meta property="og:image:height" content="1921">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" content="<%= root_url.to_s + "/inspiring-woman" %>">
+    <meta property="og:description" content="Shining a spotlight on the amazing and inspiring women in our community.">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Inspiring Women - The ZADevChat Podcast">
+    <meta property="twitter:description" content="Shining a spotlight on the amazing and inspiring women in our community.">
+    <meta property="twitter:image" content="<%= image_url "cover-women-500x500.jpg" %>">
+<% end %>
 
 <header class="site-head" style="background-image: url(<%= image_path('cover-women.jpg') %>)">
     <div class="vertical">

@@ -94,6 +94,20 @@
 		</div>
 
 
+    <div class="pagination_typesome">
+      <nav class="pagination" role="navigation">
+        <% prev_page = current_article.previous_article
+           next_page = current_article.next_article %>
+        <% if prev_page %>
+          <a class="newer-posts" href="<%= prev_page.url %>"><span class="fa fa-chevron-left"></span> <%= prev_page.title %></a>
+        <% end %>
+        <% if next_page %>
+          <a class="older-posts" href="<%= next_page.url %>"><%= next_page.title %> <span class="fa fa-chevron-right"></span></a>
+        <% end %>
+      </nav>
+    </div>
+
+
     <footer class="postfooter_typesome">
 
       <div class="authorimage--speech-bubble" style="background-image: url(<%= image_path icon %>)"></div>

@@ -27,6 +27,15 @@ h1, h2, h3, h4, h5, h6,
     margin: 0 auto;
 }
 
+.authorimage--speech-bubble {
+    background-repeat: no-repeat;
+    background-size: cover;
+	  display: block;
+    height: 90px;
+	  width: 90px;
+	  margin: 0.4rem 2.5rem 0 0;
+}
+
 
 .newsletter-home-wrapper {
     margin-bottom: 60px; // same as .article_typesome

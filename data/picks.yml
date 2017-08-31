@@ -1,3 +1,53 @@
+'73':
+- by: Inez
+  description: UCOOK
+  url: "https://ucook.co.za/"
+- by: Inez
+  description: "Simple Habit"
+  url: "http://www.simplehabit.com/"
+- by: Lara
+  description: "UX Strategy"
+  url: "http://uxstrategy.co.za/"
+- by: Lara
+  description: "Design Kit"
+  url: "http://www.designkit.org/"
+- by: Ridhwana
+  description: "Sketch"
+  url: "https://www.sketchapp.com/"
+- by: Ridhwana
+  description: "InVision"
+  url: "https://www.invisionapp.com/"
+- by: Ridhwana
+  description: "Egghead"
+  url: "https://egghead.io/"
+- by: Ridhwana
+  description: "Steve Jobs by Walter Isaacson"
+  url: "https://www.goodreads.com/book/show/11084145-steve-jobs"
+- by: Chantal
+  description: "10 Usability Heuristics for User Interface Design"
+  url: "https://www.nngroup.com/articles/ten-usability-heuristics/"
+- by: Chantal
+  description: "git it gurl t-shirt"
+  url: "https://shop.bubblesort.io/products/git-it-gurl-shirt"
+- by: Kenneth
+  description: "Pink-IT with Ruddy Riba"
+  url: "https://zadevchat.io/69/"
+- by: Kenneth
+  description: "Sim Daltonism"
+  url: "https://michelf.ca/projects/sim-daltonism/"
+- by: Kenneth
+  description: Prototype on Paper
+  url: "https://marvelapp.com/pop/"
+- by: Kevin
+  description: Clubhouse
+  url: "https://clubhouse.io/"
+- by: Kevin
+  description: You-Dont-Know-Js
+  url: "https://github.com/getify/You-Dont-Know-JS"
+- by: Kevin
+  description: "Site Reliability Engineering: How Google Runs Production Systems"
+  url: "https://www.amazon.co.uk/Site-Reliability-Engineering-Production-Systems/dp/149192912X"
+
 '71':
 - by: Jade
   description: Kaggle

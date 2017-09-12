@@ -1,4 +1,15 @@
 '73':
+- by: Louise
+  description: "Quality Software book bundle by Gerald M Weinberg"
+  url: "https://leanpub.com/b/qualitysoftware"
+- by: Len
+  description: "NVIDIA DGX Station"
+  url: "https://www.nvidia.com/en-us/data-center/dgx-station/"
+- by: Kenneth
+  description: "A Short History of Nearly Everything by Bill Bryson"
+  url: "https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything"
+
+'72':
 - by: Inez
   description: UCOOK
   url: "https://ucook.co.za/"

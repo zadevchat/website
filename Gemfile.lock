@@ -40,11 +40,11 @@ GEM
       mimemagic
       multipart-post
     http_parser.rb (0.6.0)
-    httparty (0.13.7)
-      json (~> 1.8)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
-    json (1.8.3)
+    json (1.8.6)
     kramdown (1.11.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -106,9 +106,10 @@ GEM
     mimemagic (0.4.3)
       nokogiri (~> 1)
       rake
+    mini_mime (1.1.2)
     mini_portile2 (2.8.1)
     minitest (5.9.0)
-    multi_xml (0.5.5)
+    multi_xml (0.6.0)
     multipart-post (2.0.0)
     nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)

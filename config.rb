@@ -97,10 +97,10 @@ activate :disqus do |d|
 end
 
 # UA
-activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-79554082-1'
-  ga.development = false
-end
+# activate :google_analytics do |ga|
+#   ga.tracking_id = 'UA-79554082-1'
+#   ga.development = false
+# end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -131,7 +131,7 @@ helpers PickHelpers
 # Static CSS
 activate :external_pipeline,
          name: :gulp,
-         command: "./node_modules/.bin/gulp #{'styles' if build?}",
+         command: "yarn run #{build? ? 'build' : 'dev'}",
          source: "tmp"
 
 set :markdown_engine, :redcarpet

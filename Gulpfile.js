@@ -1,12 +1,17 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 
-gulp.task('styles', function() {
-    gulp.src('styles/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+function build() {
+    return gulp.src('./styles/**/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('./tmp/stylesheets/'));
-});
+};
 
-gulp.task('default',function() {
-    gulp.watch('styles/**/*.scss', ['styles']);
-});
+function watch() {
+    gulp.watch('./styles/**/*.scss', build);
+}
+
+exports.build = build;
+exports.watch = watch;
+
+exports.default = watch;

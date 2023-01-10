@@ -1,13 +1,13 @@
 <%
-  if current_article.data.women_in_tech
+if current_article.data.women_in_tech
     header = 'cover-women.jpg'
     cover = 'cover-women-500x500.jpg'
     icon  = 'zadevchat-women.png'
-  else
+else
     header = 'cover-narrow.png'
     cover = 'cover-500x500.jpg'
     icon  = 'zadevchat.png'
-  end
+end
 %>
 
 <% content_for :head do %>
@@ -22,7 +22,7 @@
     <meta property="twitter:card" content="player">
     <meta property="twitter:title" content="<%= current_article.title %>">
     <meta property="twitter:description" content="<%= strip_tags current_article.summary %>">
-    <meta property="twitter:player" content="<%= h soundcloud_twitter_player_url(current_article.data.soundcloud_url) %>">
+    <meta property="twitter:player" content="<%= h acast_twitter_player_url(current_article.data.acast_url) %>">
     <meta property="twitter:image" content="<%= image_url cover %>">
     <meta property="twitter:player:height" content="400">
     <meta property="twitter:player:width" content="435">
@@ -68,7 +68,7 @@
 		</header>
 
 		<div class="postcontent_typesome">
-      <%= soundcloud_embed_large(current_article.data.soundcloud_url) %>
+        <%= acast_embed_large(current_article.data.acast_url) %>
 
         <% if current_article.data.sponsor_banner %>
             <div class="sponsored-episode-banner">

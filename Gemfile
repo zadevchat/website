@@ -17,7 +17,6 @@ gem 'nokogiri'
 gem "builder", "~> 3.0"
 
 gem "ruby-oembed"
-gem "soundcloud"
 
 group :development do
   gem "solargraph"

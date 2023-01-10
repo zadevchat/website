@@ -37,14 +37,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.6.0)
-    httmultiparty (0.3.16)
-      httparty (>= 0.7.3)
-      mimemagic
-      multipart-post
     http_parser.rb (0.8.0)
-    httparty (0.21.0)
-      mini_mime (>= 1.0.0)
-      multi_xml (>= 0.5.2)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
@@ -105,14 +98,8 @@ GEM
     middleman-search_engine_sitemap (1.4.0)
       builder
       middleman-core (~> 4.0)
-    mimemagic (0.4.3)
-      nokogiri (~> 1)
-      rake
-    mini_mime (1.1.2)
     mini_portile2 (2.8.1)
     minitest (5.17.0)
-    multi_xml (0.6.0)
-    multipart-post (2.2.3)
     nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
@@ -131,7 +118,6 @@ GEM
     rack-livereload (0.3.17)
       rack
     rainbow (3.1.1)
-    rake (13.0.6)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -172,9 +158,6 @@ GEM
       thor (~> 1.0)
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
-    soundcloud (0.3.7)
-      hashie
-      httmultiparty (~> 0.3.0)
     temple (0.9.1)
     thor (1.2.1)
     tilt (2.0.11)
@@ -204,7 +187,6 @@ DEPENDENCIES
   redcarpet (~> 3.3, >= 3.3.3)
   ruby-oembed
   solargraph
-  soundcloud
 
 BUNDLED WITH
    2.4.3

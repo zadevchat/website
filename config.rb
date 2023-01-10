@@ -122,8 +122,8 @@ helpers do
 
 end
 
-require "lib/sound_cloud_helpers"
-helpers SoundCloudHelpers
+require "lib/acast_helpers"
+helpers AcastHelpers
 
 require "lib/pick_helpers"
 helpers PickHelpers

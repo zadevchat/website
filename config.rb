@@ -96,12 +96,6 @@ activate :disqus do |d|
   d.shortname = 'zadevchat'
 end
 
-# UA
-# activate :google_analytics do |ga|
-#   ga.tracking_id = 'UA-79554082-1'
-#   ga.development = false
-# end
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper

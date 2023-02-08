@@ -1,9 +1,8 @@
-begin
-  require "dotenv"
-  Dotenv.load
-rescue LoadError => e
-  puts "Failed to load 'dotenv', hoping your environment is setup"
-end
+#
+# Our Middleman configuration file
+#
+
+set :url_root, "https://zadevchat.io"
 
 Time.zone = "Africa/Johannesburg"
 
@@ -21,13 +20,9 @@ page '/*.txt', layout: false
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
+# Activate and configure extensions
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-###
-# Helpers
-###
 
 # Generic blog
 activate :blog do |blog|
@@ -87,7 +82,6 @@ end
 activate :directory_indexes
 
 # Be discoverable
-set :url_root, "http://zadevchat.io"
 activate :search_engine_sitemap
 
 # Disqus
@@ -95,6 +89,17 @@ activate :disqus do |d|
   # Disqus shotname, without '.disqus.com' on the end (default = nil)
   d.shortname = 'zadevchat'
 end
+
+# Static CSS
+activate :external_pipeline,
+         name: :gulp,
+         command: "yarn run #{build? ? 'build' : 'dev'}",
+         source: "tmp"
+
+
+###
+# Helpers
+###
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -122,19 +127,11 @@ helpers AcastHelpers
 require "lib/pick_helpers"
 helpers PickHelpers
 
-# Static CSS
-activate :external_pipeline,
-         name: :gulp,
-         command: "yarn run #{build? ? 'build' : 'dev'}",
-         source: "tmp"
-
 set :markdown_engine, :redcarpet
 set :markdown, :tables => true, :autolink => true
 
 # Build-specific configuration
 configure :build do
-  set :root_url, "https://zadevchat.io"
-
   activate :asset_hash
   activate :minify_css
   activate :minify_javascript

@@ -1,9 +1,8 @@
-begin
-  require "dotenv"
-  Dotenv.load
-rescue LoadError => e
-  puts "Failed to load 'dotenv', hoping your environment is setup"
-end
+#
+# Our Middleman configuration file
+#
+
+set :url_root, "https://zadevchat.io"
 
 Time.zone = "Africa/Johannesburg"
 
@@ -21,13 +20,9 @@ page '/*.txt', layout: false
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
+# Activate and configure extensions
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-###
-# Helpers
-###
 
 # Generic blog
 activate :blog do |blog|
@@ -87,7 +82,6 @@ end
 activate :directory_indexes
 
 # Be discoverable
-set :url_root, "http://zadevchat.io"
 activate :search_engine_sitemap
 
 # Disqus
@@ -96,11 +90,16 @@ activate :disqus do |d|
   d.shortname = 'zadevchat'
 end
 
-# UA
-activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-79554082-1'
-  ga.development = false
-end
+# Static CSS
+activate :external_pipeline,
+         name: :gulp,
+         command: "yarn run #{build? ? 'build' : 'dev'}",
+         source: "tmp"
+
+
+###
+# Helpers
+###
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -122,25 +121,17 @@ helpers do
 
 end
 
-require "lib/sound_cloud_helpers"
-helpers SoundCloudHelpers
+require "lib/acast_helpers"
+helpers AcastHelpers
 
 require "lib/pick_helpers"
 helpers PickHelpers
-
-# Static CSS
-activate :external_pipeline,
-         name: :gulp,
-         command: "./node_modules/.bin/gulp #{'styles' if build?}",
-         source: "tmp"
 
 set :markdown_engine, :redcarpet
 set :markdown, :tables => true, :autolink => true
 
 # Build-specific configuration
 configure :build do
-  set :root_url, "https://zadevchat.io"
-
   activate :asset_hash
   activate :minify_css
   activate :minify_javascript

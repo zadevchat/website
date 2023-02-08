@@ -1,6 +1,15 @@
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#">
   <head>
+    <% if build? %>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9STYB9B8HY"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9STYB9B8HY');
+      </script>
+    <% end %>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,8 +47,6 @@
     <%= yield_content :head %>
   </head>
   <body class="home-template">
-    <%= google_analytics_universal_tag %>
-
     <div id="main" role="main">
       <%= yield %>
     </div>

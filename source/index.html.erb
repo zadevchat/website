@@ -49,9 +49,9 @@ A weekly panel discussion with topics around the South African software develope
 
 			<div class="postcontent_typesome">
         <% if i == 0 %>
-          <%= soundcloud_embed_large(article.data.soundcloud_url) %>
+          <%= acast_embed_large(article.data.acast_url) %>
         <% else %>
-          <%= soundcloud_embed_flash(article.data.soundcloud_url) %>
+          <%= acast_embed_flash(article.data.acast_url) %>
         <% end %>
         <p><%= article.summary %></p>
 			</div>
@@ -61,8 +61,6 @@ A weekly panel discussion with topics around the South African software develope
           <%= link_to "Read More", article, class: "more_typesome" %>
 					<span></span>
           <a class="comments_typesome" href="<%= article.url %>#disqus_thread" data-disqus-identifier="<%= article.data[:disqus_identifier] %>">Comments</a>
-          <span></span>
-          <%= link_to "SoundCloud", article.data.soundcloud_url, class: "more_typesome" %>
 				</section>
 
 				<section class="share_typesome">

@@ -62,15 +62,13 @@ title: "Inspiring Women"
       </header>
 
       <div class="postcontent_typesome">
-          <%= soundcloud_embed_flash(article.data.soundcloud_url) %>
+          <%= acast_embed_flash(article.data.acast_url) %>
           <%= article.summary %>
       </div>
 
       <footer class="excerptfooter_typesome">
           <section class="read_typesome">
               <%= link_to "Read More", article, class: "more_typesome" %>
-              <span></span>
-              <%= link_to "SoundCloud", article.data.soundcloud_url, class: "more_typesome" %>
           </section>
 
           <section class="share_typesome">

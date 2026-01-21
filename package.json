@@ -7,7 +7,7 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.57.1",
-    "wrangler": "^3.99.0"
+    "wrangler": "^3.114.17"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
